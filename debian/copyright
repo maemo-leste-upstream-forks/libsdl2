@@ -216,10 +216,10 @@ Comment:
 Files: test/shapes/*
 Comment: No specific information about the images
 
-Files: Xcode/TemplatesForXcodeTiger/*/main.c
+Files: Xcode/TemplatesForXcode*/*/main.c
 Comment: SDL files, no copyright or license notice
 
-Files: Xcode/TemplatesForXcodeTiger/*/atlantis/*
+Files: Xcode/TemplatesForXcode*/*/atlantis/*
 Copyright: 1993, 1994, Silicon Graphics, Inc.
 Comment: 
  (c) Copyright 1993, 1994, Silicon Graphics, Inc.
@@ -257,7 +257,7 @@ Comment:
  .
  OpenGL(TM) is a trademark of Silicon Graphics, Inc.
 
-Files: Xcode/TemplatesForXcodeTiger/*/atlantis/atlantis.c
+Files: Xcode/TemplatesForXcode*/*/atlantis/atlantis.c
 Copyright: 1994 Mark J. Kilgard
            1993, 1994, Silicon Graphics, Inc.
 Comment: See .../atlantis/* for full copyright notice, this one is the same
