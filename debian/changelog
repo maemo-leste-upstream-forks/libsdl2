@@ -20,8 +20,13 @@ libsdl2 (2.0~20120220c-2) UNRELEASED; urgency=low
   * debian/libsdl2-dev.manpages: add file to install local "sdl2-config.1"
   * debian/libsdl2-dev.doc-base: add doc-base registration
   * debian/sources: Removed, possible obsolete file from long ago?
+  * debian/copyright:
+    - Upstream updated to zlib/libpng
+    - Copyright-file format conversion to 1.0
+    - Complete revamp and detailed research about copyright and licenses used,
+      it's very messy and it's still possibly incomplete
 
- -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Sun, 22 Jul 2012 00:11:06 +0100
+ -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Sun, 22 Jul 2012 02:46:35 +0100
 
 libsdl2 (2.0~20120220c-1) experimental; urgency=low
 
