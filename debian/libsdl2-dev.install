@@ -4,4 +4,3 @@ usr/lib/*/*.so
 usr/lib/*/pkgconfig
 usr/bin/sdl2-config
 usr/share/aclocal/*
-usr/share/man/man3/*

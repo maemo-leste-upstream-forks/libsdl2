@@ -1,5 +1,6 @@
 libsdl2 (2.0~20120220c-2) UNRELEASED; urgency=low
 
+  [ Manuel A. Fernandez Montecelo ]
   * debian/control:
     - Updating maintainers/permissions:
       - Add myself and Felix Geyer
@@ -25,6 +26,9 @@ libsdl2 (2.0~20120220c-2) UNRELEASED; urgency=low
     - Copyright-file format conversion to 1.0
     - Complete revamp and detailed research about copyright and licenses used,
       it's very messy and it's still possibly incomplete
+
+  [ Felix Geyer ]
+  * Simplify debian/rules by using dh(1).
 
  -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Sun, 22 Jul 2012 02:46:35 +0100
 
