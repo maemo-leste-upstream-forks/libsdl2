@@ -85,7 +85,7 @@ Multi-Arch: same
 Priority: extra
 Section: debug
 Depends: ${misc:Depends},
-         libsdl2 (= ${binary:Version}),
+         libsdl2-2.0-0 (= ${binary:Version}),
 Description: Simple DirectMedia Layer debug files
  SDL is a library that allows programs portable low level access to a video
  framebuffer, audio output, mouse, and keyboard.
