@@ -1,9 +1,7 @@
-libsdl2.0 (2.0.0~20130103-1) UNRELEASED; urgency=low
+libsdl2 (2.0.0~20130103-1) UNRELEASED; urgency=low
 
   [ Manuel A. Fernandez Montecelo ]
   * debian/control:
-    - Rename packages to libsdl2.0, it will be more clear if there are versions
-      with minor releases in the near future
     - Updating maintainers/permissions:
       - Add myself and Felix Geyer
       - Set "DM-Upload-Allowed: yes"
@@ -11,17 +9,17 @@ libsdl2.0 (2.0.0~20130103-1) UNRELEASED; urgency=low
       - Remove a few obsolete items
       - Add items added lately to libsdl1.2, such as libts (touch screen)
         support
-    - Add "libsdl2.0-dbg", analog to libsdl1.2-dbg
+    - Add "libsdl2-dbg", analog to libsdl1.2-dbg
     - Change "XC-Package-Type: udeb" to "Package-Type"
   * debian/compat: set level 9
   * debian/source/format: Set to "3.0 (quilt)"
     - Remove README.source, not needed with new format
   * debian/sdl2-config.1: Fix typo, "progams"->"programs"
-  * debian/libsdl2.0-dev.install:
+  * debian/libsdl2-dev.install:
     - Remove "usr/lib/*/*.la", discouraged
     - Add man pages: "usr/share/man/man3/*"
-  * debian/libsdl2.0-dev.manpages: add file to install local "sdl2-config.1"
-  * debian/libsdl2.0-dev.doc-base: add doc-base registration
+  * debian/libsdl2-dev.manpages: add file to install local "sdl2-config.1"
+  * debian/libsdl2-dev.doc-base: add doc-base registration
   * debian/sources: Removed, possible obsolete file from long ago?
   * debian/copyright:
     - Upstream updated to zlib/libpng
