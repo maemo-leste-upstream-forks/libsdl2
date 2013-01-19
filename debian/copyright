@@ -7,24 +7,21 @@ Files: *
 Copyright: 1997-2012 Sam Lantinga <slouken@libsdl.org>
 License: zlib/libpng
 
-Files: SDL/src/libm/*
+Files: src/libm/*
 Copyright: 1993 by Sun Microsystems, Inc. All rights reserved.
 License: SunPro
 
-Files: SDL/src/main/windows/SDL_windows_main.c
-           src/main/windows/SDL_windows_main.c
+Files: src/main/windows/SDL_windows_main.c
 Copyright: 1998 Sam Lantinga
 License: PublicDomain1
 Comment: SDL_main.c, placed in the public domain by Sam Lantinga  4/13/98
 
-Files: SDL/src/render/mmx.h
-           src/render/mmx.h
+Files: src/render/mmx.h
 Copyright: 1997-99 by H. Dietz and R. Fisher
 Comment: No other mention to license, included since long ago with SDL (and its
   Debian package) under directory src/video/mmx.h
 
-Files: SDL/src/render/SDL_yuv_sw.c
-           src/render/SDL_yuv_sw.c
+Files: src/render/SDL_yuv_sw.c
 Copyright: 1995 Erik Corry
            1995 The Regents of the University of California
            1995 Brown University
@@ -88,8 +85,7 @@ Comment:
   * SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
   */
 
-Files: SDL/src/stdlib/SDL_qsort.c
-           src/stdlib/SDL_qsort.c
+Files: src/stdlib/SDL_qsort.c
 Copyright: 1998 Gareth McCaughan
 Comment:
   You may use it in anything you like; you may make money
@@ -98,25 +94,20 @@ Comment:
   you don't have to credit me. (But it would be nice if
   you did.)
 
-Files: SDL/src/thread/windows/win_ce_semaphore.c
-           src/thread/windows/win_ce_semaphore.c
+Files: src/thread/windows/win_ce_semaphore.c
 Copyright: 1998, Johnson M. Hart (with corrections 2001 by Rainer Loritz)
 Comment:
   Permission is granted for any and all use providing that this
   copyright is properly acknowledged.
   There are no assurances of suitability for any use whatsoever.
 
-Files: SDL/src/video/bwindow/SDL_bkeyboard.cc
-           src/video/bwindow/SDL_bkeyboard.cc
-       SDL/src/video/bwindow/SDL_bkeyboard.h
-           src/video/bwindow/SDL_bkeyboard.h
+Files: src/video/bwindow/SDL_bkeyboard.cc
+       src/video/bwindow/SDL_bkeyboard.h
 Copyright: 1997-2012 Sam Lantinga
 License: LGPL-2.1+
 
-Files: SDL/src/video/x11/imKStoUCS.c
-           src/video/x11/imKStoUCS.c
-       SDL/src/video/x11/imKStoUCS.h
-           src/video/x11/imKStoUCS.h
+Files: src/video/x11/imKStoUCS.c
+       src/video/x11/imKStoUCS.h
 Copyright: 1994-2003 The XFree86 Project, Inc.
 License: MIT/X11
 
