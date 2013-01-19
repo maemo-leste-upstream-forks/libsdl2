@@ -708,7 +708,7 @@ ConvertAltivec32to32_noprefetch(SDL_BlitInfo * info)
             bits = *(src++);
             RGBA_FROM_8888(bits, srcfmt, r, g, b, a);
             if(!srcfmt->Amask)
-              a = srcfmt->alpha;
+              a = info->a;
             *(dst++) = MAKE8888(dstfmt, r, g, b, a);
             width--;
         }
@@ -737,7 +737,7 @@ ConvertAltivec32to32_noprefetch(SDL_BlitInfo * info)
             bits = *(src++);    /* max 7 pixels, don't bother with prefetch. */
             RGBA_FROM_8888(bits, srcfmt, r, g, b, a);
             if(!srcfmt->Amask)
-              a = srcfmt->alpha;
+              a = info->a;
             *(dst++) = MAKE8888(dstfmt, r, g, b, a);
             extrawidth--;
         }
@@ -795,7 +795,7 @@ ConvertAltivec32to32_prefetch(SDL_BlitInfo * info)
             bits = *(src++);
             RGBA_FROM_8888(bits, srcfmt, r, g, b, a);
             if(!srcfmt->Amask)
-              a = srcfmt->alpha;
+              a = info->a;
             *(dst++) = MAKE8888(dstfmt, r, g, b, a);
             width--;
         }
@@ -828,7 +828,7 @@ ConvertAltivec32to32_prefetch(SDL_BlitInfo * info)
             bits = *(src++);    /* max 7 pixels, don't bother with prefetch. */
             RGBA_FROM_8888(bits, srcfmt, r, g, b, a);
             if(!srcfmt->Amask)
-              a = srcfmt->alpha;
+              a = info->a;
             *(dst++) = MAKE8888(dstfmt, r, g, b, a);
             extrawidth--;
         }
@@ -2360,16 +2360,16 @@ static const struct blit_table normal_blit_2[] = {
 #endif
     {0x0000F800, 0x000007E0, 0x0000001F, 4, 0x00FF0000, 0x0000FF00,
      0x000000FF,
-     0, Blit_RGB565_ARGB8888, SET_ALPHA},
+     0, Blit_RGB565_ARGB8888, NO_ALPHA | COPY_ALPHA | SET_ALPHA},
     {0x0000F800, 0x000007E0, 0x0000001F, 4, 0x000000FF, 0x0000FF00,
      0x00FF0000,
-     0, Blit_RGB565_ABGR8888, SET_ALPHA},
+     0, Blit_RGB565_ABGR8888, NO_ALPHA | COPY_ALPHA | SET_ALPHA},
     {0x0000F800, 0x000007E0, 0x0000001F, 4, 0xFF000000, 0x00FF0000,
      0x0000FF00,
-     0, Blit_RGB565_RGBA8888, SET_ALPHA},
+     0, Blit_RGB565_RGBA8888, NO_ALPHA | COPY_ALPHA | SET_ALPHA},
     {0x0000F800, 0x000007E0, 0x0000001F, 4, 0x0000FF00, 0x00FF0000,
      0xFF000000,
-     0, Blit_RGB565_BGRA8888, SET_ALPHA},
+     0, Blit_RGB565_BGRA8888, NO_ALPHA | COPY_ALPHA | SET_ALPHA},
 
     /* Default for 16-bit RGB source, used if no other blitter matches */
     {0, 0, 0, 0, 0, 0, 0, 0, BlitNtoN, 0}
