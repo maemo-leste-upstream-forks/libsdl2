@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-SHLIBVER = 2.0~20120220c
+SHLIBVER = 2.0.0~20130103
 
 DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 
@@ -53,15 +53,15 @@ override_dh_auto_clean:
 	rm -f debian/examples.tar.gz
 
 override_dh_install:
-	dh_install -plibsdl2-2.0-0-udeb --sourcedir=debian/tmp-udeb
+	dh_install -plibsdl2.0-2.0-0-udeb --sourcedir=debian/tmp-udeb
 	dh_install --remaining-packages --fail-missing -XlibSDL2.la
 
 override_dh_installexamples:
-	dh_installexamples -plibsdl2-dev debian/examples.tar.gz
+	dh_installexamples -plibsdl2.0-dev debian/examples.tar.gz
 	dh_installexamples --remaining-packages
 
 override_dh_strip:
-	dh_strip --dbg-package=libsdl2-dbg
+	dh_strip --dbg-package=libsdl2.0-dbg
 
 override_dh_makeshlibs:
-	dh_makeshlibs -V"libsdl2-2.0-0 (>= $(SHLIBVER))" --add-udeb=libsdl2-2.0-0-udeb
+	dh_makeshlibs -V"libsdl2.0-2.0-0 (>= $(SHLIBVER))" --add-udeb=libsdl2.0-2.0-0-udeb

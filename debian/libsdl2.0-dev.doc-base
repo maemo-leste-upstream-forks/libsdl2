@@ -1,4 +1,4 @@
-Document: libsdl2-dev
+Document: libsdl2.0-dev
 Title: SDL Documentation
 Author: Sam Lantinga <slouken@libsdl.org>
 Abstract: The SDL library is designed to make it easy to write games that
@@ -10,5 +10,5 @@ Abstract: The SDL library is designed to make it easy to write games that
 Section: Programming
 
 Format: HTML
-Index: /usr/share/doc/libsdl2-dev/docs/index.html
-Files: /usr/share/doc/libsdl2-dev/docs/html/*.html
+Index: /usr/share/doc/libsdl2.0-dev/docs/index.html
+Files: /usr/share/doc/libsdl2.0-dev/docs/html/*.html

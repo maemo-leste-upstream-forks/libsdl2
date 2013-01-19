@@ -1,4 +1,4 @@
-Source: libsdl2
+Source: libsdl2.0
 Priority: optional
 Section: libs
 Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
@@ -29,7 +29,7 @@ Vcs-Git: git://anonscm.debian.org/pkg-sdl/packages/libsdl2.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-sdl/packages/libsdl2.git
 Homepage: http://www.libsdl.org/
 
-Package: libsdl2-2.0-0
+Package: libsdl2.0-2.0-0
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
@@ -43,7 +43,7 @@ Description: Simple DirectMedia Layer
  This version of SDL is compiled with X11, caca and DirectFB graphics
  drivers and OSS, ALSA, NAS and PulseAudio sound drivers.
 
-Package: libsdl2-2.0-0-udeb
+Package: libsdl2.0-2.0-0-udeb
 Package-Type: udeb
 Architecture: any
 Section: debian-installer
@@ -55,11 +55,11 @@ Description: Simple DirectMedia Layer (with directfb graphics and no sound)
  .
  This version of SDL is compiled with directfb graphics and no sound.
 
-Package: libsdl2-dev
+Package: libsdl2.0-dev
 Architecture: any
 Section: libdevel
 Depends: ${misc:Depends},
-         libsdl2-2.0-0 (= ${binary:Version}),
+         libsdl2.0-2.0-0 (= ${binary:Version}),
          libx11-dev,
          libts-dev [linux-any],
          libglu1-mesa-dev,
@@ -79,13 +79,13 @@ Description: Simple DirectMedia Layer development files
  This package contains the files needed to compile and link programs which
  use SDL.
 
-Package: libsdl2-dbg
+Package: libsdl2.0-dbg
 Architecture: any
 Multi-Arch: same
 Priority: extra
 Section: debug
 Depends: ${misc:Depends},
-         libsdl2-2.0-0 (= ${binary:Version}),
+         libsdl2.0-2.0-0 (= ${binary:Version}),
 Description: Simple DirectMedia Layer debug files
  SDL is a library that allows programs portable low level access to a video
  framebuffer, audio output, mouse, and keyboard.
