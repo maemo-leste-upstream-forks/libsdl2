@@ -412,6 +412,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\include\SDL_gamecontroller.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\include\SDL_gesture.h"
 				>
 			</File>
@@ -449,6 +453,10 @@
 			</File>
 			<File
 				RelativePath="..\..\include\SDL_main.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\include\SDL_messagebox.h"
 				>
 			</File>
 			<File
@@ -517,6 +525,10 @@
 			</File>
 			<File
 				RelativePath="..\..\include\SDL_surface.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\include\SDL_system.h"
 				>
 			</File>
 			<File
@@ -805,6 +817,14 @@
 			>
 		</File>
 		<File
+			RelativePath="..\..\src\events\SDL_dropevents.c"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\events\SDL_dropevents_c.h"
+			>
+		</File>
+		<File
 			RelativePath="..\..\src\audio\dummy\SDL_dummyaudio.c"
 			>
 		</File>
@@ -842,6 +862,10 @@
 		</File>
 		<File
 			RelativePath="..\..\src\video\SDL_fillrect.c"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\joystick\SDL_gamecontroller.c"
 			>
 		</File>
 		<File
@@ -998,6 +1022,14 @@
 		</File>
 		<File
 			RelativePath="..\..\src\video\SDL_RLEaccel_c.h"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\render\software\SDL_rotate.c"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\render\software\SDL_rotate.h"
 			>
 		</File>
 		<File
@@ -1194,6 +1226,14 @@
 		</File>
 		<File
 			RelativePath="..\..\src\video\windows\SDL_windowskeyboard.h"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\video\windows\SDL_windowsmessagebox.c"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\video\windows\SDL_windowsmessagebox.h"
 			>
 		</File>
 		<File
