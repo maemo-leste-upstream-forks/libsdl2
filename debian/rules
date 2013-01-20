@@ -6,18 +6,13 @@ DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 confflags = --disable-rpath --enable-sdl-dlopen --disable-loadso \
-            --disable-video-ggi --disable-video-svga --disable-video-aalib \
             --disable-nas --disable-esd --disable-arts \
             --disable-alsa-shared --disable-pulseaudio-shared \
             --disable-x11-shared \
             --enable-video-directfb
-all_confflags = --enable-video-caca
 udeb_confflags = --enable-video-directfb \
                  --disable-video-x11 \
-                 --disable-dga --disable-video-photon \
-                 --disable-video-fbcon --disable-video-ps2gs \
-                 --disable-video-opengl --disable-video-xbios \
-                 --disable-video-gem --disable-video-caca \
+                 --disable-video-opengl \
                  --disable-audio \
                  --disable-oss --disable-alsa --disable-pulseaudio
 
@@ -36,7 +31,7 @@ endif
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	dh_auto_configure -Bbuilddir/all -- $(confflags) $(all_confflags)
+	dh_auto_configure -Bbuilddir/all -- $(confflags)
 	dh_auto_configure -Bbuilddir/udeb -- $(confflags) $(udeb_confflags)
 
 override_dh_auto_build:
