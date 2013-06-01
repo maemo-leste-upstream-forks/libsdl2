@@ -1,8 +1,8 @@
-libsdl2 (2.0.0~20130127-1) UNRELEASED; urgency=low
+libsdl2 (2.0.0~rc1-1) UNRELEASED; urgency=low
 
-  * New upstream snapshot.
+  * New upstream release candidate.
 
- -- Sam Hocevar <sho@debian.org>  Wed, 30 Jan 2013 23:01:12 +0100
+ -- Felix Geyer <fgeyer@debian.org>  Sat, 01 Jun 2013 10:17:56 +0200
 
 libsdl2 (2.0.0~20130103-1) unstable; urgency=low
 
