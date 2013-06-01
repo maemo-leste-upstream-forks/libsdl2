@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -42,8 +42,7 @@ Android_GL_LoadLibrary(_THIS, const char *path)
     if (!Android_GLHandle) {
         Android_GLHandle = dlopen("libGLESv1_CM.so",RTLD_GLOBAL);
         if (!Android_GLHandle) {
-            SDL_SetError("Could not initialize GL ES library\n");
-            return -1;
+            return SDL_SetError("Could not initialize GL ES library\n");
         }
     }
     return 0;

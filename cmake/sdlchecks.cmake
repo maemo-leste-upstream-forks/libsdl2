@@ -449,11 +449,12 @@ endmacro(CheckX11)
 #
 macro(CheckCOCOA)
   if(VIDEO_COCOA)
-    check_c_source_compiles("
+    check_objc_source_compiles("
         #import <Cocoa/Cocoa.h>
         int main (int argc, char** argv) {}" HAVE_VIDEO_COCOA)
     if(HAVE_VIDEO_COCOA)
       file(GLOB COCOA_SOURCES ${SDL2_SOURCE_DIR}/src/video/cocoa/*.m)
+      set_source_files_properties(${COCOA_SOURCES} PROPERTIES LANGUAGE C)
       set(SOURCE_FILES ${SOURCE_FILES} ${COCOA_SOURCES})
       set(SDL_VIDEO_DRIVER_COCOA 1)
       set(HAVE_SDL_VIDEO TRUE)
@@ -551,7 +552,7 @@ macro(CheckPTHREAD)
   if(PTHREADS)
     if(LINUX)
       set(PTHREAD_CFLAGS "-D_REENTRANT")
-      set(PTHREAD_LDFLAGS "-lpthread")
+      set(PTHREAD_LDFLAGS "-pthread")
     elseif(BSDI)
       set(PTHREAD_CFLAGS "-D_REENTRANT -D_THREAD_SAFE")
       set(PTHREAD_LDFLAGS "")
@@ -607,6 +608,7 @@ macro(CheckPTHREAD)
         int main(int argc, char **argv) {
           pthread_mutexattr_t attr;
           pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+          return 0;
         }" HAVE_RECURSIVE_MUTEXES)
       if(HAVE_RECURSIVE_MUTEXES)
         set(SDL_THREAD_PTHREAD_RECURSIVE_MUTEX 1)
@@ -616,6 +618,7 @@ macro(CheckPTHREAD)
             int main(int argc, char **argv) {
               pthread_mutexattr_t attr;
               pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+              return 0;
             }" HAVE_RECURSIVE_MUTEXES_NP)
         if(HAVE_RECURSIVE_MUTEXES_NP)
           set(SDL_THREAD_PTHREAD_RECURSIVE_MUTEX_NP 1)
@@ -624,7 +627,8 @@ macro(CheckPTHREAD)
 
       if(PTHREADS_SEM)
         check_c_source_compiles("#include <pthread.h>
-                                 #include <semaphore.h>" HAVE_PTHREADS_SEM)
+                                 #include <semaphore.h>
+                                 int main(int argc, char **argv) { return 0; }" HAVE_PTHREADS_SEM)
         if(HAVE_PTHREADS_SEM)
           check_c_source_compiles("
               #include <pthread.h>
