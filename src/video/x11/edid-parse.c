@@ -333,7 +333,7 @@ decode_standard_timings (const uchar *edid, MonitorInfo *info)
 	if (first != 0x01 && second != 0x01)
 	{
 	    int w = 8 * (first + 31);
-	    int h;
+	    int h = 0;
 
 	    switch (get_bits (second, 6, 7))
 	    {
@@ -524,29 +524,17 @@ decode_edid (const uchar *edid)
 
     decode_check_sum (edid, info);
     
-    if (!decode_header (edid))
+    if (!decode_header (edid) ||
+        !decode_vendor_and_product_identification (edid, info) ||
+        !decode_edid_version (edid, info) ||
+        !decode_display_parameters (edid, info) ||
+        !decode_color_characteristics (edid, info) ||
+        !decode_established_timings (edid, info) ||
+        !decode_standard_timings (edid, info) ||
+        !decode_descriptors (edid, info)) {
+        free(info);
 	return NULL;
-
-    if (!decode_vendor_and_product_identification (edid, info))
-	return NULL;
-
-    if (!decode_edid_version (edid, info))
-	return NULL;
-
-    if (!decode_display_parameters (edid, info))
-	return NULL;
-
-    if (!decode_color_characteristics (edid, info))
-	return NULL;
-
-    if (!decode_established_timings (edid, info))
-	return NULL;
-
-    if (!decode_standard_timings (edid, info))
-	return NULL;
-    
-    if (!decode_descriptors (edid, info))
-	return NULL;
+    }
     
     return info;
 }
@@ -603,6 +591,7 @@ dump_monitor_info (MonitorInfo *info)
 	case MDDI: interface = "MDDI"; break;
 	case DISPLAY_PORT: interface = "DisplayPort"; break;
 	case UNDEFINED: interface = "undefined"; break;
+	default: interface = "unknown"; break;
 	}
 	printf ("Interface: %s\n", interface);
 	
@@ -631,6 +620,7 @@ dump_monitor_info (MonitorInfo *info)
 	case MONOCHROME: s = "monochrome"; break;
 	case RGB: s = "rgb"; break;
 	case OTHER_COLOR: s = "other color"; break;
+	default: s = "unknown"; break;
 	};
 	
 	printf ("Color: %s\n", s);

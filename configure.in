@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT(README)
+AC_INIT(README.txt)
 AC_CONFIG_HEADER(include/SDL_config.h)
 AC_CONFIG_AUX_DIR(build-scripts)
 AC_CONFIG_MACRO_DIR([acinclude])
@@ -794,6 +794,14 @@ AC_HELP_STRING([--enable-pulseaudio-shared], [dynamically load PulseAudio suppor
                test x$enable_pulseaudio_shared = xyes && test x$pulseaudio_lib != x; then
                 echo "-- dynamic libpulse-simple -> $pulseaudio_lib"
                 AC_DEFINE_UNQUOTED(SDL_AUDIO_DRIVER_PULSEAUDIO_DYNAMIC, "$pulseaudio_lib", [ ])
+
+                case "$host" in
+                    # On Solaris, pulseaudio must be linked deferred explicitly
+                    # to prevent undefined symbol failures.
+                    *-*-solaris*)
+                        PULSEAUDIO_LIBS=`echo $PULSEAUDIO_LIBS | sed 's/\-l/-Wl,-l/g'`
+                        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-zdeferred $PULSEAUDIO_LIBS -Wl,-znodeferred"
+                esac
             else
                 EXTRA_LDFLAGS="$EXTRA_LDFLAGS $PULSEAUDIO_LIBS"
             fi
@@ -1415,7 +1423,7 @@ AC_HELP_STRING([--enable-video-directfb], [use DirectFB video driver [[default=n
         else
             set -- `echo $DIRECTFB_REQUIRED_VERSION | sed 's/\./ /g'`
             NEED_VERSION=`expr $1 \* 10000 + $2 \* 100 + $3`
-            set -- `directfb-config --version | sed 's/\./ /g'`
+            set -- `$DIRECTFBCONFIG --version | sed 's/\./ /g'`
             HAVE_VERSION=`expr $1 \* 10000 + $2 \* 100 + $3`
             if test $HAVE_VERSION -ge $NEED_VERSION; then
                 DIRECTFB_CFLAGS=`$DIRECTFBCONFIG --cflags`
@@ -1767,9 +1775,20 @@ AC_HELP_STRING([--enable-pthread-sem], [use pthread semaphores [[default=yes]]])
             pthread_cflags="-D_REENTRANT"
             pthread_lib="-pthread"
             ;;
-        *-*-solaris*)
+        *-*-solaris2.9)
+            # From Solaris 9+, posix4's preferred name is rt.
             pthread_cflags="-D_REENTRANT"
-            pthread_lib="-lpthread -lposix4"
+            pthread_lib="-lpthread -lrt"
+            ;;
+        *-*-solaris2.10)
+            # Solaris 10+ merged pthread into libc.
+            pthread_cflags="-D_REENTRANT"
+            pthread_lib="-lrt"
+            ;;
+        *-*-solaris*)
+            # Solaris 11+ merged rt into libc.
+            pthread_cflags="-D_REENTRANT"
+            pthread_lib=""
             ;;
         *-*-sysv5*)
             pthread_cflags="-D_REENTRANT -Kthread"
@@ -2160,8 +2179,8 @@ dnl Check for clock_gettime()
 CheckClockGettime()
 {
     AC_ARG_ENABLE(clock_gettime,
-AC_HELP_STRING([--enable-clock_gettime], [use clock_gettime() instead of gettimeofday() on UNIX [[default=no]]]),
-                  , enable_clock_gettime=no)
+AC_HELP_STRING([--enable-clock_gettime], [use clock_gettime() instead of gettimeofday() on UNIX [[default=yes]]]),
+                  , enable_clock_gettime=yes)
     if test x$enable_clock_gettime = xyes; then
         AC_CHECK_LIB(rt, clock_gettime, have_clock_gettime=yes)
         if test x$have_clock_gettime = xyes; then
@@ -2392,10 +2411,7 @@ AC_HELP_STRING([--enable-render-d3d], [enable the Direct3D render driver [[defau
             have_loadso=yes
         fi
         # Set up the system libraries we need
-        # SDL is unicode, and unicows emulates this on Windows 98/ME
-        # You can get this here: http://libunicows.sourceforge.net/
-        #EXTRA_LDFLAGS="$EXTRA_LDFLAGS -lunicows"
-        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lversion -luuid"
+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lversion -luuid -XCClinker -static-libgcc"
         # The Windows platform requires special setup
         VERSION_SOURCES="$srcdir/src/main/windows/*.rc"
         SDLMAIN_SOURCES="$srcdir/src/main/windows/*.c"
@@ -2404,7 +2420,7 @@ AC_HELP_STRING([--enable-render-d3d], [enable the Direct3D render driver [[defau
         ;;
     *-*-beos* | *-*-haiku*)
         ARCH=beos
-        ac_default_prefix=/boot/develop/tools/gnupro
+        ac_default_prefix=/boot/common
         CheckDummyVideo
         CheckDiskAudio
         CheckDummyAudio
@@ -2499,6 +2515,15 @@ AC_HELP_STRING([--enable-render-d3d], [enable the Direct3D render driver [[defau
         # The iOS platform requires special setup.
         SOURCES="$SOURCES $srcdir/src/video/uikit/*.m"
         SOURCES="$SOURCES $srcdir/src/video/uikit/*.c"
+        EXTRA_CFLAGS="$EXTRA_CFLAGS -fpascal-strings"
+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -lm -liconv -lobjc"
+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-framework,Foundation"
+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-framework,UIKit"
+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-framework,OpenGLES"
+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-framework,QuartzCore"
+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-framework,CoreAudio"
+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-framework,AudioToolbox"
+        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-framework,CoreGraphics"
         ;;
     *-*-darwin* )
         # This could be either full "Mac OS X", or plain "Darwin" which is
@@ -2719,3 +2744,4 @@ AC_CONFIG_FILES([
     Makefile:Makefile.in:Makefile.rules sdl2-config SDL2.spec sdl2.pc
 ])
 AC_OUTPUT
+chmod a+x sdl2-config

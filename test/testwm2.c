@@ -42,12 +42,13 @@ main(int argc, char *argv[])
         "NO",
         "hand",
     };
-    SDL_assert(SDL_arraysize(cursorNames) == SDL_NUM_SYSTEM_CURSORS);
 
     int i, done;
     SDL_Event event;
     int system_cursor = -1;
     SDL_Cursor *cursor = NULL;
+
+    SDL_assert(SDL_arraysize(cursorNames) == SDL_NUM_SYSTEM_CURSORS);
 
     /* Initialize test framework */
     state = SDLTest_CommonCreateState(argv, SDL_INIT_VIDEO);
@@ -128,8 +129,8 @@ main(int argc, char *argv[])
     SDL_FreeCursor(cursor);
 
     quit(0);
-	// keep the compiler happy ...
-	return(0);
+    // keep the compiler happy ...
+    return(0);
 }
 
 /* vi: set ts=4 sw=4 expandtab: */

@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2012 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -34,9 +34,13 @@ typedef struct SDL_WindowData SDL_WindowData;
 @interface Cocoa_WindowListener : NSResponder {
 #endif
     SDL_WindowData *_data;
+    BOOL observingVisible;
+    BOOL wasVisible;
 }
 
 -(void) listen:(SDL_WindowData *) data;
+-(void) pauseVisibleObservation;
+-(void) resumeVisibleObservation;
 -(void) close;
 
 /* Window delegate functionality */
