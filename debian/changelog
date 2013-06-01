@@ -3,6 +3,7 @@ libsdl2 (2.0.0~rc1-1) UNRELEASED; urgency=low
   * New upstream release candidate.
   * Filter debian/* when importing new upstream releases.
   * Bump SHLIBVER to 2.0.0~rc1.
+  * Bump Standards-Version to 3.9.4, no changes needed.
 
  -- Felix Geyer <fgeyer@debian.org>  Sat, 01 Jun 2013 10:17:56 +0200
 
