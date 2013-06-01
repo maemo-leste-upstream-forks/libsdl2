@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-SHLIBVER = 2.0~20130103
+SHLIBVER = 2.0.0~rc1
 
 DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
