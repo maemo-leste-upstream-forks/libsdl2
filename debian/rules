@@ -8,18 +8,10 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 confflags = --disable-rpath --enable-sdl-dlopen --disable-loadso \
             --disable-nas --disable-esd --disable-arts \
             --disable-alsa-shared --disable-pulseaudio-shared \
-            --disable-x11-shared \
-            --disable-video-directfb
+            --disable-x11-shared --disable-video-directfb
 
-# Only use NASM routines on x86 CPUs
-ifeq ($(DEB_HOST_ARCH_CPU),i386)
-  confflags += --enable-nasm
-endif
-
-# Don't use PlayStation 3 Cell driver on powerpc
 ifeq ($(DEB_HOST_ARCH_CPU),powerpc)
-  confflags += --enable-video-ps3=no \
-               --disable-altivec
+  confflags += --disable-altivec
 endif
 
 %:
