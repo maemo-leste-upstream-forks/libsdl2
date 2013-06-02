@@ -5,6 +5,9 @@ libsdl2 (2.0.0~rc1-1) UNRELEASED; urgency=low
   * Bump SHLIBVER to 2.0.0~rc1.
   * Update debian/docs.
   * Bump Standards-Version to 3.9.4, no changes needed.
+  * Disable directfb backend for now as it's broken and upstream
+    disables it by default.
+    - Drop the udeb package.
 
  -- Felix Geyer <fgeyer@debian.org>  Sat, 01 Jun 2013 10:17:56 +0200
 
