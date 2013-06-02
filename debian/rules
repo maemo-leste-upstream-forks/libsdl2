@@ -31,10 +31,6 @@ override_dh_auto_clean:
 override_dh_install:
 	dh_install --fail-missing -XlibSDL2.la
 
-override_dh_installexamples:
-	dh_installexamples -plibsdl2-dev debian/examples.tar.gz
-	dh_installexamples --remaining-packages
-
 override_dh_link:
 	# to address lintian warning
 	# W: libsdl2-2.0-0: dev-pkg-without-shlib-symlink usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.0.0 usr/lib/x86_64-linux-gnu/libSDL2-2.0.so
