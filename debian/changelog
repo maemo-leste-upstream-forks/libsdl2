@@ -2,6 +2,7 @@ libsdl2 (2.0.0~rc1-2) UNRELEASED; urgency=low
 
   [ Manuel A. Fernandez Montecelo ]
   * Switch to @debian.org address
+  * Bring the man page of sdl-config up to date
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 27 Jul 2013 23:01:15 +0100
 
