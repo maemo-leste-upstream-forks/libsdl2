@@ -1,3 +1,10 @@
+libsdl2 (2.0.0~rc1-2) UNRELEASED; urgency=low
+
+  [ Manuel A. Fernandez Montecelo ]
+  * Switch to @debian.org address
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 27 Jul 2013 23:01:15 +0100
+
 libsdl2 (2.0.0~rc1-1) unstable; urgency=low
 
   * New upstream release candidate.
