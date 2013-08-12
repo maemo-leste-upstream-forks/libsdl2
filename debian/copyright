@@ -90,8 +90,8 @@ License: zlib/libpng
 Comment: No specific information about the images
 
 Files: debian/*
-Copyright: 2011-2012, Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>
-           2011-2012, Felix Geyer <debfx-pkg@fobos.de>
+Copyright: 2011-2013, Manuel A. Fernandez Montecelo <mafm@debian.org>
+           2011-2013, Felix Geyer <fgeyer@debian.org>
            2011, Roman Vasiyarov <rvasiyarov@gmail.com>
            2010, Jon Dowland <jmtd@debian.org>
            2009, Barry deFreese <bdefreese@debian.org>
