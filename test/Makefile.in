@@ -13,6 +13,7 @@ TARGETS = \
 	testaudioinfo$(EXE) \
 	testautomation$(EXE) \
 	testdraw2$(EXE) \
+	testdrawchessboard$(EXE) \
 	testerror$(EXE) \
 	testfile$(EXE) \
 	testgamecontroller$(EXE) \
@@ -86,7 +87,7 @@ testautomation$(EXE): $(srcdir)/testautomation.c \
 		      $(srcdir)/testautomation_syswm.c \
 		      $(srcdir)/testautomation_timer.c \
 		      $(srcdir)/testautomation_video.c
-	$(CC) -o $@ $^ $(CFLAGS) -lSDL2_test $(LIBS) 
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS) 
 
 testmultiaudio$(EXE): $(srcdir)/testmultiaudio.c
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
@@ -101,6 +102,9 @@ testrelative$(EXE): $(srcdir)/testrelative.c
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 testdraw2$(EXE): $(srcdir)/testdraw2.c
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
+testdrawchessboard$(EXE): $(srcdir)/testdrawchessboard.c
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 testerror$(EXE): $(srcdir)/testerror.c
@@ -151,9 +155,8 @@ testlock$(EXE): $(srcdir)/testlock.c
 ifeq (@ISMACOSX@,true)
 testnative$(EXE): $(srcdir)/testnative.c \
 			$(srcdir)/testnativecocoa.m \
-			$(srcdir)/testnativew32.c \
 			$(srcdir)/testnativex11.c
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS) -L/usr/X11/lib -lX11 -framework Cocoa
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS) -framework Cocoa @XLIB@
 endif
 
 ifeq (@ISWINDOWS@,true)
@@ -165,7 +168,7 @@ endif
 ifeq (@ISUNIX@,true)
 testnative$(EXE): $(srcdir)/testnative.c \
 			$(srcdir)/testnativex11.c
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS) -L/usr/X11/lib -lX11
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS) @XLIB@
 endif
 
 testoverlay2$(EXE): $(srcdir)/testoverlay2.c
