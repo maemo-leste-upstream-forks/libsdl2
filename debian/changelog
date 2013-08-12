@@ -1,4 +1,4 @@
-libsdl2 (2.0.0+dfsg1-1) UNRELEASED; urgency=low
+libsdl2 (2.0.0+dfsg1-1) unstable; urgency=low
 
   * New upstream release
   * Filter upstream tarball from binaries and unneeded cruft
@@ -8,7 +8,7 @@ libsdl2 (2.0.0+dfsg1-1) UNRELEASED; urgency=low
   * Switch to @debian.org address
   * Bring the man page of sdl-config up to date
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Mon, 12 Aug 2013 19:34:15 +0100
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Mon, 12 Aug 2013 20:45:31 +0100
 
 libsdl2 (2.0.0~rc1-1) unstable; urgency=low
 
