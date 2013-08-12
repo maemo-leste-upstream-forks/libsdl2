@@ -89,29 +89,6 @@ Copyright: none
 License: zlib/libpng
 Comment: No specific information about the images
 
-Files: Xcode/TemplatesForXcode*/*/main.c
-Copyright: none
-License: zlib/libpng
-Comment: SDL files, no copyright or license notice
-
-Files: Xcode/TemplatesForXcode*/*/atlantis/*
-Copyright: 1993, 1994, Silicon Graphics, Inc.
-License: SGI_atlantis
-
-Files: Xcode/TemplatesForXcode*/*/atlantis/atlantis.c
-Copyright: 1994 Mark J. Kilgard
-           1993, 1994, Silicon Graphics, Inc.
-License: SGI_atlantis
-Comment: See license for full copyright notice, this one is the same except for
- the additional copyright holder
-
-Files: Xcode/SDLTest/sdlcommon_prefix.h
-Copyright: 2003 Darrell Walisser
-License: zlib/libpng
-Comment:
- Created by Darrell Walisser on Wed Aug 06 2003.
- Copyright (c) 2003 __MyCompanyName__. All rights reserved.
-
 Files: debian/*
 Copyright: 2011-2012, Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>
            2011-2012, Felix Geyer <debfx-pkg@fobos.de>

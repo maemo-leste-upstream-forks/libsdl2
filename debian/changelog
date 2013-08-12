@@ -2,6 +2,8 @@ libsdl2 (2.0.0+dfsg1-1) UNRELEASED; urgency=low
 
   * New upstream release
   * Filter upstream tarball from binaries and unneeded cruft
+    - Remove from debian/copyright files that are now filtered out when creating
+      the orig.tar
   * Switch to @debian.org address
   * Bring the man page of sdl-config up to date
 
