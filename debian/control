@@ -10,6 +10,7 @@ Standards-Version: 3.9.4
 Build-Depends: debhelper (>= 9),
                dpkg-dev (>= 1.16.1~),
                libasound2-dev [linux-any],
+               libdbus-1-dev,
                libgl1-mesa-dev,
                libglu1-mesa-dev,
                libpulse-dev,
@@ -49,11 +50,11 @@ Package: libsdl2-dev
 Architecture: any
 Section: libdevel
 Depends: ${misc:Depends},
+         libsdl2-2.0-0 (= ${binary:Version}),
          libasound2-dev [linux-any],
          libgl1-mesa-dev,
          libglu1-mesa-dev,
          libpulse-dev,
-         libsdl2-2.0-0 (= ${binary:Version}),
          libts-dev [linux-any],
          libudev-dev [linux-any],
          libusb2-dev [kfreebsd-any],
