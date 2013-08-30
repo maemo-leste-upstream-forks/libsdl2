@@ -1,3 +1,11 @@
+libsdl2 (2.0.0+dfsg1-2) UNRELEASED; urgency=low
+
+  * Remove external_header_paths.diff, it's not needed anymore and pulls
+    harmful flags into the pkg-config file. Thanks to Thibaut Girka for
+    the report and analysis. (Closes: #720650)
+
+ -- Felix Geyer <fgeyer@debian.org>  Fri, 30 Aug 2013 20:10:56 +0200
+
 libsdl2 (2.0.0+dfsg1-1) unstable; urgency=low
 
   * New upstream release
