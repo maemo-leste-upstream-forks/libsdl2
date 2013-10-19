@@ -13,3 +13,4 @@
 ####310_fixmouseclicks
 ####320_disappearingcursor.diff
 fix_joystick_misc_axes.diff
+bug-723797-false_positives_in_mouse_wheel_code.patch

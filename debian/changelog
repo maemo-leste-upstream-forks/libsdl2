@@ -1,6 +1,9 @@
 libsdl2 (2.0.0+dfsg1-3) UNRELEASED; urgency=low
 
   * Build-Depends on pkg-config
+  * Apply patch accepted upstream to work around a false-positive in the
+    X11 mouse wheel code (Closes: #723797).  Thanks Darren Salt for the
+    report and the fix.
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 18 Oct 2013 22:00:37 +0100
 

@@ -1,0 +1,61 @@
+Description: Work around a false-positive in the X11 mouse wheel code
+ .
+ This false positive occurs when one particular button on my mouse is
+ pressed. The kernel which I'm using is patched to cause a release event to
+ be synthesised immediately when the mouse says that this button is pressed
+ because the mouse doesn't signal release until the button is next pressed.
+ .
+ (Also documents a false negative, observed with the horizontal scroll wheel
+ on the same mouse.)
+Author: Darren Salt <devspam@moreofthesa.me.uk>
+Last-Update: 2013-10-19
+Bug-Debian: http://bugs.debian.org/723797
+Forwarded: http://bugzilla.libsdl.org/show_bug.cgi?id=2110
+Applied-Upstream: http://hg.libsdl.org/SDL/rev/6073ad385c9b
+
+# HG changeset patch
+# User Sam Lantinga <slouken@libsdl.org>
+# Date 1380350117 25200
+# Node ID 6073ad385c9bd68834950c556b4e643f4fad638e
+# Parent  3c9889bf26269988c8ea7bee3154d2cd3b7875ae
+# User Darren Salt <devspam@moreofthesa.me.uk>
+# Date 1379621782 -3600
+#      Thu Sep 19 21:16:22 2013 +0100
+Work around a false-positive in the X11 mouse wheel code
+
+This false positive occurs when one particular button on my mouse is
+pressed. The kernel which I'm using is patched to cause a release event to
+be synthesised immediately when the mouse says that this button is pressed
+because the mouse doesn't signal release until the button is next pressed.
+
+(Also documents a false negative, observed with the horizontal scroll wheel
+on the same mouse.)
+
+diff -r 3c9889bf2626 -r 6073ad385c9b src/video/x11/SDL_x11events.c
+--- a/src/video/x11/SDL_x11events.c	Fri Sep 27 23:29:05 2013 -0700
++++ b/src/video/x11/SDL_x11events.c	Fri Sep 27 23:35:17 2013 -0700
+@@ -135,7 +135,9 @@
+     XPointer arg)
+ {
+     XEvent *event = (XEvent *) arg;
++    /* we only handle buttons 4 and 5 - false positive avoidance */
+     if (chkev->type == ButtonRelease &&
++        (event->xbutton.button == Button4 || event->xbutton.button == Button5) &&
+         chkev->xbutton.button == event->xbutton.button &&
+         chkev->xbutton.time == event->xbutton.time)
+         return True;
+@@ -150,7 +152,12 @@
+            however, mouse wheel events trigger a button press and a button release
+            immediately. thus, checking if the same button was released at the same
+            time as it was pressed, should be an adequate hack to derive a mouse
+-           wheel event. */
++           wheel event.
++           However, there is broken and unusual hardware out there...
++           - False positive: a button for which a release event is
++             generated (or synthesised) immediately.
++           - False negative: a wheel which, when rolled, doesn't have
++             a release event generated immediately. */
+         if (XCheckIfEvent(display, &relevent, X11_IsWheelCheckIfEvent,
+             (XPointer) event)) {
+ 
+
