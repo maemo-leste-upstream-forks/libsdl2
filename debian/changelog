@@ -1,4 +1,4 @@
-libsdl2 (2.0.0+dfsg1-3) UNRELEASED; urgency=low
+libsdl2 (2.0.0+dfsg1-3) unstable; urgency=low
 
   * Build-Depends on pkg-config
   * Apply patch accepted upstream to work around a false-positive in the
@@ -33,7 +33,7 @@ libsdl2 (2.0.0+dfsg1-3) UNRELEASED; urgency=low
     - 320_activate_xrandr_on_default.diff
     - 320_disappearingcursor.diff
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 18 Oct 2013 22:00:37 +0100
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 20 Oct 2013 00:58:48 +0100
 
 libsdl2 (2.0.0+dfsg1-2) unstable; urgency=low
 
