@@ -1,3 +1,9 @@
+Description: Left/Right Joystick Axis doesn't work with some controllers
+Author: Sam Hocevar <sam@hocevar.net>
+Last-Update: 2013-10-19
+Bug-Debian: http://bugs.debian.org/673324
+Forwarded: https://bugzilla.libsdl.org/show_bug.cgi?id=2165
+
 Index: libsdl2/src/joystick/linux/SDL_sysjoystick.c
 ===================================================================
 --- a/src/joystick/linux/SDL_sysjoystick.c	2012-05-18 00:51:07.758390396 +0200
