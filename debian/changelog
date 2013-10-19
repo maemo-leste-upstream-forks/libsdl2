@@ -4,6 +4,34 @@ libsdl2 (2.0.0+dfsg1-3) UNRELEASED; urgency=low
   * Apply patch accepted upstream to work around a false-positive in the
     X11 mouse wheel code (Closes: #723797).  Thanks Darren Salt for the
     report and the fix.
+  * Review and removal of old patches not applied in SDL2, virtually of
+    them applied upstream, or rejected as invalid for good reason, or
+    don't apply any more (code/functionality removed upstream).  I
+    forwarded and documented the remaining patches.
+    - 001_autogen_autotools_fix.diff
+    - 020_libcaca_new_api.diff
+    - 030_pulseaudio_enable.diff
+    - 040_propagate_pic_to_nasm.diff
+    - 050_altivec_detection.diff
+    - 060_disable_ipod.diff
+    - 205_lock_keys.diff
+    - 205_x11_keysym_fix.diff
+    - 206_gcc4_compilation_fix.diff
+    - 209_alsa_priority.diff
+    - 214_missing_mmx_blit.diff
+    - 215_kfreebsd_gnu.diff
+    - 216_page_size.diff
+    - 217_x11_keytounicode.diff
+    - 218_double_free.diff
+    - 218_joystick_memmove.diff
+    - 219_pulseaudio_crackles.diff
+    - 220_std_cld.diff
+    - 221_check_SDL_NOKBD_environment_variable.diff
+    - 222_joystick_crash.diff
+    - 310_fixmouseclicks
+    - 310_segfault_noGLX.diff
+    - 320_activate_xrandr_on_default.diff
+    - 320_disappearingcursor.diff
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 18 Oct 2013 22:00:37 +0100
 
