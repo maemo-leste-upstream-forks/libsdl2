@@ -32,9 +32,9 @@ override_dh_install:
 	dh_install --fail-missing -XlibSDL2.la
 
 override_dh_link:
-	# to address lintian warning
-	# W: libsdl2-2.0-0: dev-pkg-without-shlib-symlink usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.0.0 usr/lib/x86_64-linux-gnu/libSDL2-2.0.so
-	dh_link -plibsdl2-dev usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so.0.0.0 usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so
+        # to address lintian warning
+        # W: libsdl2-2.0-0: dev-pkg-without-shlib-symlink usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.0.0 usr/lib/x86_64-linux-gnu/libSDL2-2.0.so
+	dh_link -plibsdl2-dev usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so.0.1.0 usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so
 	dh_link --remaining-packages
 
 override_dh_strip:
