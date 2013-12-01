@@ -1,3 +1,9 @@
+libsdl2 (2.0.0+dfsg1-4) UNRELEASED; urgency=low
+
+  * Import upstream gpg key for uscan to verify the orig tarball.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 01 Dec 2013 10:53:16 +0100
+
 libsdl2 (2.0.0+dfsg1-3) unstable; urgency=low
 
   * Build-Depends on pkg-config
