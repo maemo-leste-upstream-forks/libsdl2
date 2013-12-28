@@ -1,8 +1,9 @@
-libsdl2 (2.0.1+dfsg1-1) UNRELEASED; urgency=low
+libsdl2 (2.0.1+dfsg1-1) UNRELEASED; urgency=medium
 
   * New upstream release (Closes: #728974)
-  * Remove patch applied upstream:
-    bug-723797-false_positives_in_mouse_wheel_code.patch
+    - Remove patch applied upstream:
+      bug-723797-false_positives_in_mouse_wheel_code.patch
+  * Bump Standards-Version to 3.9.5, no changes needed.
   
   [ Felix Geyer ]
   * Import upstream gpg key for uscan to verify the orig tarball.
