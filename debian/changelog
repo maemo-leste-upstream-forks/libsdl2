@@ -1,4 +1,4 @@
-libsdl2 (2.0.1+dfsg1-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.1+dfsg1-1) unstable; urgency=medium
 
   * New upstream release (Closes: #728974)
     - Remove patch applied upstream:
@@ -8,7 +8,7 @@ libsdl2 (2.0.1+dfsg1-1) UNRELEASED; urgency=medium
   [ Felix Geyer ]
   * Import upstream gpg key for uscan to verify the orig tarball.
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Thu, 14 Nov 2013 15:10:01 +0000
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 28 Dec 2013 12:31:19 +0000
 
 libsdl2 (2.0.0+dfsg1-3) unstable; urgency=low
 
