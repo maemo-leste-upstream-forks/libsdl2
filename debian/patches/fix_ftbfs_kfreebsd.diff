@@ -1,0 +1,24 @@
+Description: Fix FTBFS on Debian GNU/kFreeBSD.
+Author: Felix Geyer <fgeyer@debian.org>
+Bug: https://bugzilla.libsdl.org/show_bug.cgi?id=2335
+
+--- libsdl2-2.0.1+dfsg1.orig/src/cpuinfo/SDL_cpuinfo.c
++++ libsdl2-2.0.1+dfsg1/src/cpuinfo/SDL_cpuinfo.c
+@@ -621,7 +621,7 @@ SDL_GetSystemRAM(void)
+ #endif
+ #ifdef HAVE_SYSCTLBYNAME
+         if (SDL_SystemRAM <= 0) {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+ #ifdef HW_REALMEM
+             int mib[2] = {CTL_HW, HW_REALMEM};
+ #else
+@@ -630,7 +630,7 @@ SDL_GetSystemRAM(void)
+ #endif /* HW_REALMEM */
+ #else
+             int mib[2] = {CTL_HW, HW_MEMSIZE};
+-#endif /* __FreeBSD__ */
++#endif /* __FreeBSD__ || __FreeBSD_kernel__ */
+             Uint64 memsize = 0;
+             size_t len = sizeof(memsize);
+             
