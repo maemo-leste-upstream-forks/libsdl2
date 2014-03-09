@@ -1,8 +1,8 @@
-libsdl2 (2.0.1+dfsg1-3) UNRELEASED; urgency=medium
+libsdl2 (2.0.1+dfsg1-3) unstable; urgency=medium
 
   * Use "dh_autoreconf" to support new architectures
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 09 Mar 2014 01:44:03 +0000
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 09 Mar 2014 01:58:11 +0000
 
 libsdl2 (2.0.1+dfsg1-2) unstable; urgency=medium
 
