@@ -1,10 +1,10 @@
 libsdl2 (2.0.2+dfsg1-1) UNRELEASED; urgency=low
 
   * New upstream release
-    - Add support for Wayland, including build-depends for
-      libegl1-mesa-dev, libxkbcommon-dev and libwayland-dev
-      (Closes: #714482)
     - Remove patch applied upstream: fix_ftbfs_kfreebsd.diff
+    - Add support for Wayland, including build-depends for libegl1-mesa-dev,
+      libxkbcommon-dev and libwayland-dev.  Thanks Franz Schrober for the
+      request and the help to enable it (Closes: #714482)
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 14 Mar 2014 23:28:54 +0000
 
