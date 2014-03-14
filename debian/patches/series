@@ -1,3 +1,2 @@
 SDL2_dont_propagate_lpthread.diff
 fix_joystick_misc_axes.diff
-fix_ftbfs_kfreebsd.diff
