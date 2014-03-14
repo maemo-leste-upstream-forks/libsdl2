@@ -20,10 +20,8 @@ Forwarded: http://bugzilla.libsdl.org/show_bug.cgi?id=1392
  sdl2.pc.in     |    2 +-
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-Index: libsdl2/sdl2.pc.in
-===================================================================
---- libsdl2.orig/sdl2.pc.in	2012-05-18 00:51:07.802411954 +0200
-+++ libsdl2/sdl2.pc.in	2012-05-18 00:51:26.270961566 +0200
+--- a/sdl2.pc.in
++++ b/sdl2.pc.in
 @@ -10,6 +10,6 @@
  Version: @SDL_VERSION@
  Requires:
@@ -32,10 +30,8 @@ Index: libsdl2/sdl2.pc.in
 +Libs: -L${libdir} @SDL_RLD_FLAGS@ -lSDL2
  Libs.private: @SDL_STATIC_LIBS@
  Cflags: -I${includedir}/SDL2 @SDL_CFLAGS@
-Index: libsdl2/sdl2-config.in
-===================================================================
---- libsdl2.orig/sdl2-config.in	2012-05-18 00:51:07.802411954 +0200
-+++ libsdl2/sdl2-config.in	2012-05-18 00:51:26.270961566 +0200
+--- a/sdl2-config.in
++++ b/sdl2-config.in
 @@ -45,7 +45,7 @@
        echo -I@includedir@/SDL2 @SDL_CFLAGS@
        ;;

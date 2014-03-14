@@ -6,7 +6,7 @@ Forwarded: https://bugzilla.libsdl.org/show_bug.cgi?id=2165
 
 --- a/src/joystick/linux/SDL_sysjoystick.c
 +++ b/src/joystick/linux/SDL_sysjoystick.c
-@@ -646,7 +646,7 @@
+@@ -500,7 +500,7 @@
                  ++joystick->nbuttons;
              }
          }
