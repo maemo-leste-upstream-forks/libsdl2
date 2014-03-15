@@ -1,4 +1,4 @@
-libsdl2 (2.0.2+dfsg1-1) UNRELEASED; urgency=low
+libsdl2 (2.0.2+dfsg1-1) unstable; urgency=low
 
   * New upstream release
     - Remove patch applied upstream: fix_ftbfs_kfreebsd.diff
@@ -7,7 +7,7 @@ libsdl2 (2.0.2+dfsg1-1) UNRELEASED; urgency=low
       request and the help to enable it.  (Closes: #714482)
     - Add support for OpenGLES, including build-depends for libgles2-mesa-dev
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 14 Mar 2014 23:28:54 +0000
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 15 Mar 2014 00:22:48 +0000
 
 libsdl2 (2.0.1+dfsg1-3) unstable; urgency=medium
 
