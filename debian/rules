@@ -16,6 +16,17 @@ ifeq ($(DEB_HOST_ARCH_CPU),powerpc)
   confflags += --disable-altivec
 endif
 
+# disable Wayland on non-Linux, they do not support other kernels at the moment
+ifeq (,$(findstring linux,$(DEB_HOST_ARCH_CPU)))
+  confflags += --disable-video-wayland
+endif
+
+# disable OpenGLES on Hurd, it does not support it at the moment
+ifeq (hurd,$(findstring hurd,$(DEB_HOST_ARCH_CPU)))
+  confflags += --disable--video-opengles
+endif
+
+
 %:
 	dh $@ --with autoreconf --parallel
 
