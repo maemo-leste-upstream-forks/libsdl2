@@ -17,7 +17,10 @@ ifeq ($(DEB_HOST_ARCH_CPU),powerpc)
 endif
 
 # disable Wayland on non-Linux, they do not support other kernels at the moment
-ifeq (,$(findstring linux,$(DEB_HOST_ARCH_CPU)))
+ifeq (hurd,$(findstring hurd,$(DEB_HOST_ARCH_CPU)))
+  confflags += --disable-video-wayland
+endif
+ifeq (kfreefsd,$(findstring kfreebsd,$(DEB_HOST_ARCH_CPU)))
   confflags += --disable-video-wayland
 endif
 
