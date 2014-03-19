@@ -1,3 +1,10 @@
+libsdl2 (2.0.2+dfsg1-3) unstable; urgency=medium
+
+  * Actually change Build-Depends libegl1-mesa-dev to be conditionally
+    [!hurd-any].  It was applied to libgl1-mesa-dev by mistake in -2.
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Wed, 19 Mar 2014 20:22:29 +0000
+
 libsdl2 (2.0.2+dfsg1-2) unstable; urgency=medium
 
   * Conditional dependencies libegl1-mesa-dev [!hurd-any],
