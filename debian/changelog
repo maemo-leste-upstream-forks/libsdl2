@@ -1,4 +1,4 @@
-libsdl2 (2.0.2+dfsg1-4) UNRELEASED; urgency=medium
+libsdl2 (2.0.2+dfsg1-4) unstable; urgency=medium
 
   [ Hector Oron ]
   * d/control: remove libts-dev build depends. (Closes: #751766)
@@ -6,7 +6,7 @@ libsdl2 (2.0.2+dfsg1-4) UNRELEASED; urgency=medium
   [ Felix Geyer ]
   * Move upstream GPG key as an ascii-armored keyring to debian/upstream/.
 
- -- Hector Oron <zumbi@debian.org>  Mon, 16 Jun 2014 13:36:52 +0200
+ -- Felix Geyer <fgeyer@debian.org>  Mon, 16 Jun 2014 21:02:07 +0200
 
 libsdl2 (2.0.2+dfsg1-3) unstable; urgency=medium
 
