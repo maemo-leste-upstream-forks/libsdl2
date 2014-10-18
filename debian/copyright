@@ -73,12 +73,12 @@ Comment:
 Files: test/testhaptic.c
 Copyright: 1997-2011 Sam Lantinga <slouken@libsdl.org>
            2008 Edgar Simo Serra
-License: BSD_3_clause
+License: BSD-3-clause
 
 Files: test/testrumble.c
 Copyright: 1997-2011 Sam Lantinga <slouken@libsdl.org>
            2011 Edgar Simo Serra
-License: BSD_3_clause
+License: BSD-3-clause
 
 Files: test/test-automation/src/libSDLtest/fuzzer/utl_md5.*
 Copyright: 1990-1991 RSA Data Security, Inc.
@@ -152,7 +152,7 @@ License: MIT/X11
  ings in this Software without prior written authorization from the XFree86
  Project.
 
-License: BSD_3_clause
+License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
      * Redistributions of source code must retain the above copyright
