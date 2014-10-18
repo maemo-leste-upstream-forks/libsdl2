@@ -1,3 +1,10 @@
+libsdl2 (2.0.2+dfsg1-5) unstable; urgency=medium
+
+  * patch to use default screen from DISPLAY (Closes: #754401)
+  * fix short name of BSD-3-clause
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 18 Oct 2014 19:01:30 +0200
+
 libsdl2 (2.0.2+dfsg1-4) unstable; urgency=medium
 
   [ Hector Oron ]
