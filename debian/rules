@@ -16,6 +16,10 @@ ifeq ($(DEB_HOST_ARCH_CPU),powerpc)
   confflags += --disable-altivec
 endif
 
+ifeq ($(DEB_HOST_ARCH_CPU),ppc64el)
+  confflags += --disable-altivec
+endif
+
 # disable Wayland on non-Linux, they do not support other kernels at the moment
 ifeq (hurd,$(findstring hurd,$(DEB_HOST_ARCH_CPU)))
   confflags += --disable-video-wayland
