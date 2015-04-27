@@ -1,4 +1,4 @@
-libsdl2 (2.0.2+dfsg1-7) UNRELEASED; urgency=medium
+libsdl2 (2.0.2+dfsg1-7) unstable; urgency=medium
 
   * Bump Policy Standards-Version to 3.9.6 (no changes needed)
   * Remove Barry deFreese from uploaders
@@ -7,7 +7,7 @@ libsdl2 (2.0.2+dfsg1-7) UNRELEASED; urgency=medium
     and rest of the Reproducible Builds team for the analysis and patch
     suggested.
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Mon, 16 Feb 2015 20:30:12 +0000
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Mon, 27 Apr 2015 22:53:31 +0100
 
 libsdl2 (2.0.2+dfsg1-6) unstable; urgency=medium
 
