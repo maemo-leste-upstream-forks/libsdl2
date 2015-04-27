@@ -2,8 +2,7 @@ Source: libsdl2
 Priority: optional
 Section: libs
 Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
-Uploaders: Barry deFreese <bdefreese@debian.org>,
-           Sam Hocevar <sho@debian.org>,
+Uploaders: Sam Hocevar <sho@debian.org>,
            Manuel A. Fernandez Montecelo <mafm@debian.org>,
            Felix Geyer <fgeyer@debian.org>
 Standards-Version: 3.9.6
