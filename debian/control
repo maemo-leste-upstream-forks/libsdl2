@@ -6,7 +6,7 @@ Uploaders: Barry deFreese <bdefreese@debian.org>,
            Sam Hocevar <sho@debian.org>,
            Manuel A. Fernandez Montecelo <mafm@debian.org>,
            Felix Geyer <fgeyer@debian.org>
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9),
                dh-autoreconf,
                libasound2-dev [linux-any],

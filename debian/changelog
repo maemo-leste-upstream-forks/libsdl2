@@ -1,5 +1,6 @@
 libsdl2 (2.0.2+dfsg1-7) UNRELEASED; urgency=medium
 
+  * Bump Policy Standards-Version to 3.9.6 (no changes needed)
   * Change for reproducible builds: use "--owner=0 --group=0" when
     creating the "examples" tar file (Closes: #777186).  Thanks Chris Lamb
     and rest of the Reproducible Builds team for the analysis and patch
