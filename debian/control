@@ -15,6 +15,7 @@ Build-Depends: debhelper (>= 9),
                libgles2-mesa-dev [!hurd-any],
                libglu1-mesa-dev,
                libpulse-dev,
+               libsndio-dev,
                libudev-dev [linux-any],
                libusb2-dev [kfreebsd-any],
                libusbhid-dev [kfreebsd-any],
@@ -47,7 +48,7 @@ Description: Simple DirectMedia Layer
  a video framebuffer, audio output, mouse, and keyboard.
  .
  This version of SDL is compiled with X11, caca and DirectFB graphics
- drivers and OSS, ALSA, NAS and PulseAudio sound drivers.
+ drivers and OSS, ALSA, NAS, sndio and PulseAudio sound drivers.
 
 Package: libsdl2-dev
 Architecture: any
@@ -61,6 +62,7 @@ Depends: ${misc:Depends},
          libgles2-mesa-dev [!hurd-any],
          libglu1-mesa-dev,
          libpulse-dev,
+         libsndio-dev,
          libudev-dev [linux-any],
          libusb2-dev [kfreebsd-any],
          libusbhid-dev [kfreebsd-any],

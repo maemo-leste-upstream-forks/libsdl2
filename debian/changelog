@@ -2,6 +2,7 @@ libsdl2 (2.0.2+dfsg1-8) UNRELEASED; urgency=medium
 
   * Change to improve build reproducibility: tar file permission modes.
     Thanks Reiner Herrmann. (Closes: #803578)
+  * Build with sndio support (Closes: #799707)
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 31 Oct 2015 18:50:06 +0000
 
