@@ -1,4 +1,4 @@
-libsdl2 (2.0.2+dfsg1-8) UNRELEASED; urgency=medium
+libsdl2 (2.0.2+dfsg1-8) unstable; urgency=medium
 
   * Change to improve build reproducibility: tar file permission modes.
     Thanks Reiner Herrmann. (Closes: #803578)
@@ -8,7 +8,7 @@ libsdl2 (2.0.2+dfsg1-8) UNRELEASED; urgency=medium
     wildcard-matches-nothing-in-dep5-copyright and
     unused-file-paragraph-in-dep5-copyright)
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 31 Oct 2015 18:50:06 +0000
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 01 Nov 2015 00:55:03 +0000
 
 libsdl2 (2.0.2+dfsg1-7) unstable; urgency=medium
 
