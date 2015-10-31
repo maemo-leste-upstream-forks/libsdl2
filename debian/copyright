@@ -40,10 +40,6 @@ Copyright: 1997-2012 Sam Lantinga <slouken@libsdl.org>
            1990 RSA Data Security, Inc.
 License: zlib/libpng and RSA_Data_Security
 
-Files: src/thread/windows/win_ce_semaphore.c
-Copyright: 1998, Johnson M. Hart (with corrections 2001 by Rainer Loritz)
-License: Johnson_M._Hart
-
 Files: src/video/bwindow/SDL_bkeyboard.cc
        src/video/bwindow/SDL_bkeyboard.h
 Copyright: 1997-2012 Sam Lantinga
@@ -278,11 +274,6 @@ License: Gareth_McCaughan
   part of an executable without including source code;
   you don't have to credit me. (But it would be nice if
   you did.)
-
-License: Johnson_M._Hart
-  Permission is granted for any and all use providing that this
-  copyright is properly acknowledged.
-  There are no assurances of suitability for any use whatsoever.
 
 License: SunPro
   Developed at SunPro, a Sun Microsystems, Inc. business.
