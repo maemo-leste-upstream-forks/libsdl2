@@ -6,6 +6,7 @@ Files-Excluded: Android.mk
                 android-project
                 debian
                 VisualC
+                VisualC-WinRT
                 Xcode
                 Xcode-iOS
 
