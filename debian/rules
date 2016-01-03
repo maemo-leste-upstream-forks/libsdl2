@@ -67,13 +67,14 @@ override_dh_autoreconf:
 override_dh_auto_configure:
 	dh_auto_configure -- $(confflags)
 
-override_dh_auto_build:
-	dh_auto_build
+override_dh_auto_build-indep:
 	tar czf debian/examples.tar.gz test --owner=0 --group=0 --mode=go=rX,u+rw,a-s
+	doxygen docs/doxyfile
 
-override_dh_auto_clean:
+override_dh_auto_clean-indep:
 	dh_auto_clean
 	rm -f debian/examples.tar.gz
+	rm -rf output
 
 override_dh_install:
 	dh_install --fail-missing -XlibSDL2.la
