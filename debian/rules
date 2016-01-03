@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-SHLIBVER = 2.0.0
+SHLIBVER = 2.0.4
 
 DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
@@ -82,7 +82,7 @@ override_dh_install:
 override_dh_link:
         # to address lintian warning
         # W: libsdl2-2.0-0: dev-pkg-without-shlib-symlink usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.0.0 usr/lib/x86_64-linux-gnu/libSDL2-2.0.so
-	dh_link -plibsdl2-dev usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so.0.2.0 usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so
+	dh_link -plibsdl2-dev usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so.0.4.0 usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so
 	dh_link --remaining-packages
 
 override_dh_strip:
