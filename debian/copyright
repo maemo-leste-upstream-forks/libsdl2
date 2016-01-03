@@ -42,9 +42,9 @@ Files: src/stdlib/SDL_qsort.c
 Copyright: 1998 Gareth McCaughan
 License: Gareth_McCaughan
 
-Files: src/test/SDL_test_md5.c
+Files: src/test/SDL_test_md5.c include/SDL_test_md5.h
 Copyright: 1997-2012 Sam Lantinga <slouken@libsdl.org>
-           1990 RSA Data Security, Inc.
+           1990-1991 RSA Data Security, Inc.
 License: zlib/libpng and RSA_Data_Security
 
 Files: src/video/haiku/SDL_bkeyboard.cc
@@ -76,10 +76,6 @@ Files: test/testrumble.c
 Copyright: 1997-2011 Sam Lantinga <slouken@libsdl.org>
            2011 Edgar Simo Serra
 License: BSD-3-clause
-
-Files: src/test/SDL_test_md5.c include/SDL_test_md5.h
-Copyright: 1990-1991 RSA Data Security, Inc.
-License: RSA_Data_Security
 
 Files: test/shapes/*
 Copyright: none
