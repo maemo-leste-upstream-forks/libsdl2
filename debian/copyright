@@ -11,8 +11,19 @@ Files-Excluded: Android.mk
                 Xcode-iOS
 
 Files: *
-Copyright: 1997-2012 Sam Lantinga <slouken@libsdl.org>
+Copyright: 1997-2016 Sam Lantinga <slouken@libsdl.org>
 License: zlib/libpng
+
+Files: include/SDL_opengl_glext.h
+       include/SDL_opengles2_khrplatform.h
+Copyright: 2008-2014 The Khronos Group Inc.
+License: Expat-like
+
+Files: include/SDL_opengles2_gl2.h
+       include/SDL_opengles2_gl2ext.h
+       include/SDL_opengles2_gl2platform.h
+Copyright: 1997-2016 Sam Lantinga <slouken@libsdl.org>
+License: SGI-Free-Software-License-B
 
 Files: src/libm/*
 Copyright: 1993 by Sun Microsystems, Inc. All rights reserved.
@@ -22,6 +33,10 @@ Files: src/main/windows/SDL_windows_main.c
 Copyright: 1998 Sam Lantinga
 License: PublicDomain_Sam_Lantinga
 Comment: SDL_main.c, placed in the public domain by Sam Lantinga  4/13/98
+
+Files: src/main/winrt/SDL_winrt_main_NonXAML.cpp
+Copyright: 2014 David Ludwig
+License: PublicDomain_David_Ludwig
 
 Files: src/render/mmx.h
 Copyright: 1997-99 by H. Dietz and R. Fisher
@@ -77,13 +92,18 @@ Copyright: 1997-2011 Sam Lantinga <slouken@libsdl.org>
            2011 Edgar Simo Serra
 License: BSD-3-clause
 
+Files: test/nacl/*
+Copyright: 2013 The Chromium Authors
+License: BSD-3-clause-chromium
+
 Files: test/shapes/*
 Copyright: none
 License: zlib/libpng
 Comment: No specific information about the images
 
 Files: debian/*
-Copyright: 2011-2013, Manuel A. Fernandez Montecelo <mafm@debian.org>
+Copyright: 2015, Gianfranco Costamagna <locutusofborg@debian.org>
+           2011-2013, Manuel A. Fernandez Montecelo <mafm@debian.org>
            2011-2013, Felix Geyer <fgeyer@debian.org>
            2011, Roman Vasiyarov <rvasiyarov@gmail.com>
            2010, Jon Dowland <jmtd@debian.org>
@@ -95,6 +115,54 @@ Copyright: 2011-2013, Manuel A. Fernandez Montecelo <mafm@debian.org>
            2001, Branden Robinson <branden@debian.org>
 License: LGPL-2.1+
 
+License: SGI-Free-Software-License-B
+ SGI FREE SOFTWARE LICENSE B (Version 2.0, Sept. 18, 2008)
+ Copyright (C) 1991-2000 Silicon Graphics, Inc. All Rights Reserved.
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction, including without limitation
+ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice including the dates of first publication and
+ either this permission notice or a reference to
+ http://oss.sgi.com/projects/FreeB/
+ shall be included in all copies or substantial portions of the Software.
+ ,
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ SILICON GRAPHICS, INC. BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+ OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ .
+ Except as contained in this notice, the name of Silicon Graphics, Inc.
+ shall not be used in advertising or otherwise to promote the sale, use or
+ other dealings in this Software without prior written authorization from
+ Silicon Graphics, Inc.
+
+License: Expat-like
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and/or associated documentation files (the
+ "Materials"), to deal in the Materials without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Materials, and to
+ permit persons to whom the Materials are furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Materials.
+ .
+ THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
 
 License: zlib/libpng
  This software is provided 'as-is', without any express or implied
@@ -144,6 +212,35 @@ License: MIT/X11
  be used in advertising or otherwise to promote the sale, use or other deal-
  ings in this Software without prior written authorization from the XFree86
  Project.
+
+License: BSD-3-clause-chromium
+ Copyright (c) 2011 Google Inc. All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+    * Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+ copyright notice, this list of conditions and the following disclaimer
+ in the documentation and/or other materials provided with the
+ distribution.
+    * Neither the name of Google Inc. nor the names of its
+ contributors may be used to endorse or promote products derived from
+ this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
@@ -280,6 +377,9 @@ License: SunPro
 
 License: PublicDomain_Sam_Lantinga
  Placed in the public domain by Sam Lantinga  4/13/98
+
+License: PublicDomain_David_Ludwig
+ placed in the public domain by David Ludwig  3/13/14
 
 License: PublicDomain_Edgar_Simo
  Written by Edgar Simo "bobbens"
