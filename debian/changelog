@@ -1,7 +1,7 @@
 libsdl2 (2.0.4+dfsg1-1) UNRELEASED; urgency=medium
 
   * Team upload.
-  * New upstream release (Closes: #788688, #798265)
+  * New upstream release (Closes: #788688, #798265, #788540)
   * Add Files-Excluded keyword to copyright file, allowing to
     import a new release with uscan command. (Closes: #804662)
 
