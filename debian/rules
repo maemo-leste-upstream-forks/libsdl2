@@ -70,6 +70,9 @@ override_dh_auto_configure:
 override_dh_auto_build-indep:
 	tar czf debian/examples.tar.gz test --owner=0 --group=0 --mode=go=rX,u+rw,a-s
 	doxygen docs/doxyfile
+	# useless files
+	find output -name "*.md5" -delete
+	find output -type d -empty -delete
 
 override_dh_auto_clean-indep:
 	dh_auto_clean
