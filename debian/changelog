@@ -1,8 +1,5 @@
 libsdl2 (2.0.4+dfsg1-1) UNRELEASED; urgency=medium
 
-  * TODO:
-    - bump soname?
-    - drop dbg package?
   * Team upload.
   * Fix copyright lintian warning.
   * Update copyright to new release.
