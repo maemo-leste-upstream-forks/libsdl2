@@ -6,7 +6,7 @@ Uploaders:
  Sam Hocevar <sho@debian.org>,
  Manuel A. Fernandez Montecelo <mafm@debian.org>,
  Felix Geyer <fgeyer@debian.org>
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Build-Depends:
  debhelper (>= 9),
  dh-autoreconf,
