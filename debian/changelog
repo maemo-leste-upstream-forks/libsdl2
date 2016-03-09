@@ -4,6 +4,7 @@ libsdl2 (2.0.4+dfsg2-1) unstable; urgency=medium
   * Bump Policy Standards-Version to 3.9.7 (no changes needed)
 
   [ Gianfranco Costamagna ]
+  * Fix insecure VCS fields.
   * Re-import the same tarball without SDL-qsort.c file.
     - the license issue is fixed already, because the original
       maintainer relicensed it (so we are adding it as a patch now)
