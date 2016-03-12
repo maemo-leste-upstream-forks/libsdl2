@@ -4,6 +4,7 @@ libsdl2 (2.0.4+dfsg2-1) UNRELEASED; urgency=medium
   * Bump Policy Standards-Version to 3.9.7 (no changes needed)
   * Drop -dbg package
   * Fix for reproducible builds: timestamps_in_tarball
+  * Fixes for reproducible builds: timestamps_in_gzip_headers
 
   [ Gianfranco Costamagna ]
   * Fix insecure VCS fields.
