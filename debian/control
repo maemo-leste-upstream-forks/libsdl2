@@ -113,17 +113,3 @@ Description: Reference manual for libsdl2
  framebuffer, audio output, mouse, and keyboard.
  .
  This package contains the reference manual and examples.
-
-Package: libsdl2-dbg
-Architecture: any
-Multi-Arch: same
-Priority: extra
-Section: debug
-Depends:
- libsdl2-2.0-0 (= ${binary:Version}),
- ${misc:Depends}
-Description: Simple DirectMedia Layer debug files
- SDL is a library that allows programs portable low level access to a video
- framebuffer, audio output, mouse, and keyboard.
- .
- This package contains the debug symbols for the SDL library.

@@ -88,8 +88,5 @@ override_dh_link:
 	dh_link -plibsdl2-dev usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so.0.4.0 usr/lib/$(DEB_HOST_MULTIARCH)/libSDL2-2.0.so
 	dh_link --remaining-packages
 
-override_dh_strip:
-	dh_strip --dbg-package=libsdl2-dbg
-
 override_dh_makeshlibs:
 	dh_makeshlibs -V"libsdl2-2.0-0 (>= $(SHLIBVER))"
