@@ -77,6 +77,9 @@ override_dh_auto_build-indep:
 	find output -name "*.md5" -delete
 	find output -type d -empty -delete
 
+	find output -name "jquery.js" -delete
+	dh_link -plibsdl2-doc usr/share/javascript/jquery/jquery.js usr/share/doc/libsdl2-doc/html/jquery.js
+
 override_dh_auto_clean-indep:
 	dh_auto_clean
 	rm -f debian/examples.tar.gz
