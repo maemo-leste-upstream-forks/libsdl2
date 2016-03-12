@@ -57,7 +57,7 @@ Description: Simple DirectMedia Layer
  framebuffer, audio output, mouse, and keyboard.
  .
  This version of SDL is compiled with X11 and Wayland graphics drivers and OSS,
- ALSA, NAS, sndio and PulseAudio sound drivers.
+ ALSA, sndio and PulseAudio sound drivers.
 
 Package: libsdl2-dev
 Architecture: any
