@@ -38,7 +38,7 @@ SOURCE_DATE := $(shell dpkg-parsechangelog --show-field=Date)
 
 
 %:
-	dh $@ --with autoreconf --parallel
+	dh $@ --with autoreconf --parallel --dbgsym-migration='libsdl2-dbg (<< 2.0.4+dfsg2-1~)'
 
 override_dh_autoreconf:
         # aclocal needs to include in specific order, and/or it seems that
