@@ -6,13 +6,12 @@ libsdl2 (2.0.4+dfsg2-1) UNRELEASED; urgency=medium
   * Fixes for reproducible builds:
     - timestamps_in_tarball, use --clamp-mtime with changelog as date
     - timestamps_in_gzip_headers, export GZIP="-9n"
+    - sort files by name when creating "examples.tar.gz"
   * Add depends from -doc on libjs-jquery, use symlink instead of embedded
     copy
   * Ensure proper migration from -dbg package using "dh_strip
     --dbgsym-migration"
   * Bump debhelper dependency for --dbgsym-migration
-  * Fix for reproducible builds:
-    - sort files by name when creating "examples.tar.gz"
   * Enable ibus support (Closes: #822924)
 
   [ Gianfranco Costamagna ]
