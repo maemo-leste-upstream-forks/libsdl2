@@ -70,6 +70,7 @@ Depends:
  libgl1-mesa-dev,
  libgles2-mesa-dev [!hurd-any],
  libglu1-mesa-dev,
+ libibus-1.0-dev,
  libpulse-dev,
  libsdl2-2.0-0 (= ${binary:Version}),
  libsndio-dev,
