@@ -16,6 +16,7 @@ Build-Depends:
  libgl1-mesa-dev,
  libgles2-mesa-dev [!hurd-any],
  libglu1-mesa-dev,
+ libibus-1.0-dev,
  libpulse-dev,
  libsndio-dev,
  libudev-dev [linux-any],

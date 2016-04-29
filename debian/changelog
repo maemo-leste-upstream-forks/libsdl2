@@ -13,6 +13,7 @@ libsdl2 (2.0.4+dfsg2-1) UNRELEASED; urgency=medium
   * Bump debhelper dependency for --dbgsym-migration
   * Fix for reproducible builds:
     - sort files by name when creating "examples.tar.gz"
+  * Enable ibus support (Closes: #822924)
 
   [ Gianfranco Costamagna ]
   * Fix insecure VCS fields.
