@@ -1,4 +1,4 @@
-libsdl2 (2.0.4+dfsg2-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.4+dfsg2-1) unstable; urgency=medium
 
   [ Manuel A. Fernandez Montecelo ]
   * Bump Policy Standards-Version to 3.9.8 (no changes needed)
@@ -25,7 +25,7 @@ libsdl2 (2.0.4+dfsg2-1) UNRELEASED; urgency=medium
       this repack can be removed in the next upstream tarball import.
       (Closes: #814276).
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 21 Feb 2016 19:08:44 +0000
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Thu, 19 May 2016 11:48:54 +0100
 
 libsdl2 (2.0.4+dfsg1-2) unstable; urgency=low
 
