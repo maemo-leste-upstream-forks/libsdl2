@@ -13,6 +13,9 @@ libsdl2 (2.0.4+dfsg2-1) UNRELEASED; urgency=medium
     --dbgsym-migration"
   * Bump debhelper dependency for --dbgsym-migration
   * Enable ibus support (Closes: #822924)
+  * d/patches:
+    - Add bug_822210_fix_sdl2-config.cmake_whitespace.patch: Fix upstream
+      problem with sdl2-config.cmake (Closes: #822210)
 
   [ Gianfranco Costamagna ]
   * Fix insecure VCS fields.
