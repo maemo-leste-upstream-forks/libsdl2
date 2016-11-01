@@ -1,3 +1,2 @@
 SDL2_dont_propagate_lpthread.diff
-replace-relicenced-SDL_qsort.patch
 bug_822210_fix_sdl2-config.cmake_whitespace.patch

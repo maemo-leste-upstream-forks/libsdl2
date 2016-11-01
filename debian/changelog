@@ -1,6 +1,8 @@
 libsdl2 (2.0.5+dfsg1-1) UNRELEASED; urgency=medium
 
   * New upstream release
+    - Drop debian/patches applied or backported from upstream:
+      * replace-relicenced-SDL_qsort.patch
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Tue, 01 Nov 2016 18:38:43 +0100
 
