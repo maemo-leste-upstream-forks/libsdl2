@@ -1,10 +1,12 @@
 libsdl2 (2.0.5+dfsg1-1) UNRELEASED; urgency=medium
 
   * New upstream release
-    - Drop debian/patches applied or backported from upstream:
+    - Drop (all) debian/patches, there had been originally backported from
+      upstream or are now applied there:
       * replace-relicenced-SDL_qsort.patch
       * SDL2_dont_propagate_lpthread.diff (included in 2.0.4 already, but not
         dropped then)
+      * bug_822210_fix_sdl2-config.cmake_whitespace.patch
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Tue, 01 Nov 2016 18:38:43 +0100
 
