@@ -1,3 +1,9 @@
+Description: Fix problem with sdl2-config.cmake and whitespace
+Author: Manuel A. Fernandez Montecelo <mafm@debian.org>
+Last-Update: 2016-11-01
+Bug-Debian: http://bugs.debian.org/822210
+Forwarded: http://bugzilla.libsdl.org/show_bug.cgi?id=3295
+
 diff --git a/sdl2-config.cmake.in b/sdl2-config.cmake.in
 index e5a036a..03efbe1 100644
 --- a/sdl2-config.cmake.in
