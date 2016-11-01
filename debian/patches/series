@@ -1,2 +1,1 @@
-SDL2_dont_propagate_lpthread.diff
 bug_822210_fix_sdl2-config.cmake_whitespace.patch
