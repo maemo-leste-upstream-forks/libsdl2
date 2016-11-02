@@ -1,4 +1,4 @@
-libsdl2 (2.0.5+dfsg1-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.5+dfsg1-1) unstable; urgency=low
 
   * New upstream release
     - Drop (all) debian/patches, there had been originally backported from
@@ -9,7 +9,7 @@ libsdl2 (2.0.5+dfsg1-1) UNRELEASED; urgency=medium
       * bug_822210_fix_sdl2-config.cmake_whitespace.patch
   * d/control: add Build-Depend on wayland-protocols, needed by the new version
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Tue, 01 Nov 2016 18:38:43 +0100
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Wed, 02 Nov 2016 01:20:36 +0100
 
 libsdl2 (2.0.4+dfsg2-1) unstable; urgency=medium
 
