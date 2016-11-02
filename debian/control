@@ -34,7 +34,8 @@ Build-Depends:
  libxt-dev,
  libxv-dev,
  libxxf86vm-dev,
- pkg-config
+ pkg-config,
+ wayland-protocols
 Build-Depends-Indep:
  doxygen
 Vcs-Git: https://anonscm.debian.org/git/pkg-sdl/packages/libsdl2.git
