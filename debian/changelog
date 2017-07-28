@@ -3,6 +3,7 @@ libsdl2 (2.0.5+dfsg1-3) UNRELEASED; urgency=medium
   * Switch to debhelper compat level v10
     - dh flags --parallel are not needed
     - autoreconf is invoked by default
+  * Bump Policy Standards-Version to 4.0.0 (no changes needed)
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 28 Jul 2017 20:53:42 +0200
 
