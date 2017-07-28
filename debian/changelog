@@ -3,6 +3,9 @@ libsdl2 (2.0.5+dfsg1-3) UNRELEASED; urgency=medium
   * Switch to debhelper compat level v10
     - dh flags --parallel are not needed
     - autoreconf is invoked by default
+      * disable autoheader (invoked automatically by autoreconf),
+        necessary in order to use debhelper compat level v10 without
+        overriding dh-autoreconf calls
   * Bump Policy Standards-Version to 4.0.0 (no changes needed)
   * Install WhatsNew.txt as upstream changelog
 

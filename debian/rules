@@ -13,6 +13,11 @@ confflags = --disable-rpath --enable-sdl-dlopen --disable-loadso \
             --enable-video-opengles \
             --enable-video-wayland --disable-wayland-shared
 
+# disable autoheader (invoked automatically by autoreconf), necessary in order
+# to use debhelper compat level v10 without overriding dh-autoreconf calls
+export AUTOHEADER := /bin/true
+
+
 ifeq ($(DEB_HOST_ARCH_CPU),powerpc)
   confflags += --disable-altivec
 endif
