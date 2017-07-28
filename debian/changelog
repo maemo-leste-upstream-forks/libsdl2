@@ -1,4 +1,4 @@
-libsdl2 (2.0.5+dfsg1-3) UNRELEASED; urgency=medium
+libsdl2 (2.0.5+dfsg1-3) unstable; urgency=medium
 
   * Switch to debhelper compat level v10
     - dh flags --parallel are not needed
@@ -9,7 +9,7 @@ libsdl2 (2.0.5+dfsg1-3) UNRELEASED; urgency=medium
   * Bump Policy Standards-Version to 4.0.0 (no changes needed)
   * Install WhatsNew.txt as upstream changelog
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 28 Jul 2017 20:53:42 +0200
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 28 Jul 2017 23:35:01 +0200
 
 libsdl2 (2.0.5+dfsg1-2) unstable; urgency=medium
 
