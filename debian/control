@@ -90,6 +90,7 @@ Depends:
  libxv-dev,
  libxxf86vm-dev,
  ${misc:Depends}
+Multi-Arch: same
 Conflicts:
  libsdl-1.3-dev
 Replaces:
