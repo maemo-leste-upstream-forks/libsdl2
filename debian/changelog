@@ -1,4 +1,4 @@
-libsdl2 (2.0.6+dfsg1-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.6+dfsg1-1) unstable; urgency=medium
 
   [ Manuel A. Fernandez Montecelo ]
   * New upstream release
@@ -10,7 +10,7 @@ libsdl2 (2.0.6+dfsg1-1) UNRELEASED; urgency=medium
   [ Gianfranco Costamagna ]
   * Make dev package finally multiarch
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Tue, 26 Sep 2017 23:40:38 +0200
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Wed, 27 Sep 2017 00:29:24 +0200
 
 libsdl2 (2.0.5+dfsg1-3) unstable; urgency=medium
 
