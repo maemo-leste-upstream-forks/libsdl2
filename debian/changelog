@@ -1,6 +1,10 @@
-libsdl2 (2.0.5+dfsg1-4) UNRELEASED; urgency=medium
+libsdl2 (2.0.6+dfsg1-1) UNRELEASED; urgency=medium
 
-  * Team upload
+  [ Manuel A. Fernandez Montecelo ]
+  * New upstream release
+    - Closes: #733015
+
+  [ Gianfranco Costamagna ]
   * Make dev package finally multiarch
 
  -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 05 Aug 2017 08:54:04 +0200
