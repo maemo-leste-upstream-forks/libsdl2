@@ -21,6 +21,7 @@ Build-Depends:
  libudev-dev [linux-any],
  libusb2-dev [kfreebsd-any],
  libusbhid-dev [kfreebsd-any],
+ libvulkan-dev [linux-any],
  libwayland-dev [linux-any],
  libx11-dev,
  libxcursor-dev,

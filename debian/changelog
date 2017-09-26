@@ -1,15 +1,17 @@
-libsdl2 (2.0.6+dfsg1-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.6+dfsg1-2) UNRELEASED; urgency=medium
 
   [ Manuel A. Fernandez Montecelo ]
   * New upstream release
     - Closes: #733015
+    - Enable new Vulkan video output on Linux
+      * adding build-depends, changes in d/rules
   * Override on dh_installchangelogs to install upstream changelog (wrong
     override on dh_auto_installchangelogs before)
 
   [ Gianfranco Costamagna ]
   * Make dev package finally multiarch
 
- -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 05 Aug 2017 08:54:04 +0200
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Tue, 26 Sep 2017 23:40:38 +0200
 
 libsdl2 (2.0.5+dfsg1-3) unstable; urgency=medium
 
