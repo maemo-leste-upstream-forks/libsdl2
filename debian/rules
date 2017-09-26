@@ -69,8 +69,8 @@ override_dh_auto_clean-indep:
 	rm -f debian/examples.tar.gz
 	rm -rf output
 
-override_dh_install:
-	dh_install --fail-missing -XlibSDL2.la
+override_dh_missing:
+	dh_missing --fail-missing -XlibSDL2main.la -XlibSDL2_test.la
 
 override_dh_link:
         # to address lintian warning
