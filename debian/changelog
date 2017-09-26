@@ -3,8 +3,8 @@ libsdl2 (2.0.6+dfsg1-1) UNRELEASED; urgency=medium
   [ Manuel A. Fernandez Montecelo ]
   * New upstream release
     - Closes: #733015
-  * Override on dh_installchangelogs to install upstream changelog (wrong
-    override on dh_auto_installchangelogs before)
+  * Override on dh_installchangelogs to install upstream changelog WhatsNew.txt
+    (wrong override on dh_auto_installchangelogs before)
   * Mark -doc package as "Multi-Arch: foreign"
 
   [ Gianfranco Costamagna ]
