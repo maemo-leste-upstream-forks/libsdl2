@@ -3,8 +3,6 @@ libsdl2 (2.0.6+dfsg1-1) UNRELEASED; urgency=medium
   [ Manuel A. Fernandez Montecelo ]
   * New upstream release
     - Closes: #733015
-    - Enable new Vulkan video output on Linux
-      * adding build-depends, changes in d/rules
   * Override on dh_installchangelogs to install upstream changelog (wrong
     override on dh_auto_installchangelogs before)
 
