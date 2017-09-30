@@ -1,8 +1,8 @@
-libsdl2 (2.0.6+dfsg1-2) UNRELEASED; urgency=medium
+libsdl2 (2.0.6+dfsg1-2) unstable; urgency=medium
 
   * Fix libSDL2-2.0.so symlink, thanks Andreas Beckmann (Closes: #877270)
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 30 Sep 2017 10:08:04 +0200
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 30 Sep 2017 10:09:26 +0200
 
 libsdl2 (2.0.6+dfsg1-1) unstable; urgency=medium
 
