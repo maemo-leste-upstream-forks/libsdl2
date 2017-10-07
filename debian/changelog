@@ -1,3 +1,12 @@
+libsdl2 (2.0.6+dfsg1-3) UNRELEASED; urgency=medium
+
+  * debian/patches/dc7245e3d1f2.patch:
+    - backport upstream fix for dbus error.
+      LP: #1721907
+      thanks LGB [Gábor Lénárt] (lgb) for the report!
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 07 Oct 2017 09:33:15 +0200
+
 libsdl2 (2.0.6+dfsg1-2) unstable; urgency=medium
 
   * Fix libSDL2-2.0.so symlink, thanks Andreas Beckmann (Closes: #877270)

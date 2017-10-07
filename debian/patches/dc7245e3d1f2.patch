@@ -1,0 +1,18 @@
+Origin: https://hg.libsdl.org/SDL/rev/dc7245e3d1f2
+
+diff -r 3a23ca106752 -r dc7245e3d1f2 src/core/linux/SDL_ibus.c
+--- a/src/core/linux/SDL_ibus.c	Mon Oct 02 10:50:33 2017 -0700
++++ b/src/core/linux/SDL_ibus.c	Thu Oct 05 09:37:28 2017 -0700
+@@ -479,7 +479,7 @@
+     SDL_DBusContext *dbus = SDL_DBus_GetContext();
+     
+     if (IBus_CheckConnection(dbus)) {
+-        SDL_DBus_CallVoidMethodOnConnection(ibus_conn, IBUS_SERVICE, input_ctx_path, IBUS_INPUT_INTERFACE, method);
++        SDL_DBus_CallVoidMethodOnConnection(ibus_conn, IBUS_SERVICE, input_ctx_path, IBUS_INPUT_INTERFACE, method, DBUS_TYPE_INVALID);
+     }
+ }
+ 
+
+
+
+
