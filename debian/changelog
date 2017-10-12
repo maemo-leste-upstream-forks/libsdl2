@@ -1,4 +1,4 @@
-libsdl2 (2.0.6+dfsg1-3) UNRELEASED; urgency=high
+libsdl2 (2.0.6+dfsg1-3) unstable; urgency=high
 
   [ Gianfranco Costamagna ]
   * debian/patches/dc7245e3d1f2.patch:
@@ -12,7 +12,7 @@ libsdl2 (2.0.6+dfsg1-3) UNRELEASED; urgency=high
     - Closes: #878264
   * Enable verbose build logs.
 
- -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 07 Oct 2017 09:33:15 +0200
+ -- Felix Geyer <fgeyer@debian.org>  Thu, 12 Oct 2017 18:33:41 +0200
 
 libsdl2 (2.0.6+dfsg1-2) unstable; urgency=medium
 
