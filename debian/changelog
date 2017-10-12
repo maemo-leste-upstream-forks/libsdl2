@@ -1,9 +1,15 @@
-libsdl2 (2.0.6+dfsg1-3) UNRELEASED; urgency=medium
+libsdl2 (2.0.6+dfsg1-3) UNRELEASED; urgency=high
 
+  [ Gianfranco Costamagna ]
   * debian/patches/dc7245e3d1f2.patch:
     - backport upstream fix for dbus error.
       LP: #1721907
       thanks LGB [Gábor Lénárt] (lgb) for the report!
+
+  [ Felix Geyer ]
+  * Fix CVE-2017-2888: Integer overflow while creating a new RGB surface.
+    - Add d/patches/CVE-2017-2888.patch
+    - Closes: #878264
 
  -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 07 Oct 2017 09:33:15 +0200
 
