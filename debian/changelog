@@ -1,3 +1,13 @@
+libsdl2 (2.0.6+dfsg1-4) unstable; urgency=high
+
+  * Import further upstream patches for CVE-2017-2888.
+    The initial fix was incomplete. (Closes: #878264)
+    - d/patches/CVE-2017-2888-1.patch
+    - d/patches/CVE-2017-2888-2.patch
+    - d/patches/CVE-2017-2888-3.patch
+
+ -- Felix Geyer <fgeyer@debian.org>  Wed, 18 Oct 2017 21:36:23 +0200
+
 libsdl2 (2.0.6+dfsg1-3) unstable; urgency=high
 
   [ Gianfranco Costamagna ]

@@ -1,3 +1,5 @@
 no-libdir.patch
 dc7245e3d1f2.patch
-CVE-2017-2888.patch
+CVE-2017-2888-1.patch
+CVE-2017-2888-2.patch
+CVE-2017-2888-3.patch
