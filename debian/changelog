@@ -3,6 +3,8 @@ libsdl2 (2.0.7+dfsg1-2) unstable; urgency=medium
   * Bump std-version to 4.1.1, no changes required
   * Add fcitx support (Closes: #881042), thanks
     Zhang Jingqiang <zh_jq@outlook.com> for the report!
+  * Switch URI in secure mode
+  * Update copyright years
 
  -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 07 Nov 2017 13:09:13 +0100
 
