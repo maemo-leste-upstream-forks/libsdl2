@@ -9,6 +9,7 @@ Uploaders:
 Standards-Version: 4.1.1
 Build-Depends:
  debhelper (>= 10~),
+ fcitx-libs-dev,
  libasound2-dev [linux-any],
  libdbus-1-dev,
  libegl1-mesa-dev [!hurd-any],
