@@ -11,7 +11,7 @@ Files-Excluded: Android.mk
                 Xcode-iOS
 
 Files: *
-Copyright: 1997-2016 Sam Lantinga <slouken@libsdl.org>
+Copyright: 1997-2017 Sam Lantinga <slouken@libsdl.org>
 License: zlib/libpng
 
 Files: include/SDL_opengl_glext.h
