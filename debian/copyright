@@ -1,7 +1,7 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: SDL
 Upstream-Contact: Sam Lantinga <slouken@libsdl.org>
-Source: http://www.libsdl.org/
+Source: https://www.libsdl.org/
 Files-Excluded: Android.mk
                 android-project
                 debian
