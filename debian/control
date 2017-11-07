@@ -36,6 +36,7 @@ Build-Depends:
  libxv-dev,
  libxxf86vm-dev,
  pkg-config,
+ libsamplerate0-dev,
  wayland-protocols
 Build-Depends-Indep:
  doxygen

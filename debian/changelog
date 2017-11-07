@@ -1,10 +1,13 @@
 libsdl2 (2.0.7+dfsg1-2) unstable; urgency=medium
 
+  * Team upload
   * Bump std-version to 4.1.1, no changes required
   * Add fcitx support (Closes: #881042), thanks
     Zhang Jingqiang <zh_jq@outlook.com> for the report!
   * Switch URI in secure mode
   * Update copyright years
+  * Enable also samplerate support
+  * Also switch watch file in secure mode
 
  -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 07 Nov 2017 13:09:13 +0100
 
@@ -240,7 +243,7 @@ libsdl2 (2.0.1+dfsg1-1) unstable; urgency=medium
     - Remove patch applied upstream:
       bug-723797-false_positives_in_mouse_wheel_code.patch
   * Bump Standards-Version to 3.9.5, no changes needed.
-  
+ 
   [ Felix Geyer ]
   * Import upstream gpg key for uscan to verify the orig tarball.
 
