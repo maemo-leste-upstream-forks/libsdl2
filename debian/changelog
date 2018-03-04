@@ -1,9 +1,9 @@
-libsdl2 (2.0.8+dfsg1-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.8+dfsg1-1) unstable; urgency=medium
 
   * New upstream release.
     - Fixes IBus not working properly. (Closes: #878484)
 
- -- Felix Geyer <fgeyer@debian.org>  Sun, 04 Mar 2018 10:30:42 +0100
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 04 Mar 2018 12:07:25 +0100
 
 libsdl2 (2.0.7+dfsg1-3) unstable; urgency=medium
 
