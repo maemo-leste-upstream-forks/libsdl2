@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2017 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -20,9 +20,11 @@
 */
 #include "../SDL_internal.h"
 
-/* FIXME: This breaks on various versions of GCC and should be rewritten using intrinsics */
-#if 0 /* (__GNUC__ > 2) && defined(__i386__) && __OPTIMIZE__ && SDL_ASSEMBLY_ROUTINES && !defined(__clang__) */
-#define USE_MMX_ASSEMBLY 1
-#endif
+
+/* YUV conversion functions */
+
+extern int SDL_ConvertPixels_YUV_to_RGB(int width, int height, Uint32 src_format, const void *src, int src_pitch, Uint32 dst_format, void *dst, int dst_pitch);
+extern int SDL_ConvertPixels_RGB_to_YUV(int width, int height, Uint32 src_format, const void *src, int src_pitch, Uint32 dst_format, void *dst, int dst_pitch);
+extern int SDL_ConvertPixels_YUV_to_YUV(int width, int height, Uint32 src_format, const void *src, int src_pitch, Uint32 dst_format, void *dst, int dst_pitch);
 
 /* vi: set ts=4 sw=4 expandtab: */
