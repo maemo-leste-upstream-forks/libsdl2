@@ -36,9 +36,6 @@ ifeq (kfreefsd,$(findstring kfreebsd,$(DEB_HOST_ARCH_CPU)))
   confflags += --disable-video-wayland
 endif
 
-# the SDL module for Vulkan not compiling even in Linux at the moment
-confflags += --disable-video-vulkan
-
 # disable OpenGLES on Hurd, it does not support it at the moment
 ifeq (hurd,$(findstring hurd,$(DEB_HOST_ARCH_CPU)))
   confflags += --disable--video-opengles
