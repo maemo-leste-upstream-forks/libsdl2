@@ -7,6 +7,10 @@ libsdl2 (2.0.8+dfsg1-2) unstable; urgency=medium
   [ Gianfranco Costamagna ]
   * Team upload
   * Enable vulkan everywhere
+  * debian/patches/SDL2-dynapi-symbol-resolution-fix.patch:
+    cherry-pick upstream fix for Unity-based games shipping bundled
+    libsdl2 version (LP: #1772471)
+    - thanks Ryan Gordon for the patch and help
 
   [ Ryan C. Gordon (icculus) ]
   * Disable --disable-loadso switch, it was useless and it is wrong
