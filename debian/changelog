@@ -6,6 +6,7 @@ libsdl2 (2.0.8+dfsg1-2) unstable; urgency=medium
 
   [ Gianfranco Costamagna ]
   * Team upload
+  * Enable vulkan everywhere
 
   [ Ryan C. Gordon (icculus) ]
   * Disable --disable-loadso switch, it was useless and it is wrong
