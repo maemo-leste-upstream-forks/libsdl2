@@ -1,7 +1,15 @@
-libsdl2 (2.0.8+dfsg1-2) UNRELEASED; urgency=medium
+libsdl2 (2.0.8+dfsg1-2) unstable; urgency=medium
 
+  [ Felix Geyer ]
   * Remove Multi-Arch: same from libsdl2-dev as SDL_config.h is architecture
     dependent.
+
+  [ Gianfranco Costamagna ]
+  * Team upload
+
+  [ Ryan C. Gordon (icculus) ]
+  * Disable --disable-loadso switch, it was useless and it is wrong
+    in many cases (see LP: #1740517 for discussion)
 
  -- Felix Geyer <fgeyer@debian.org>  Sun, 09 Sep 2018 01:41:38 +0200
 
