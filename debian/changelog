@@ -1,3 +1,11 @@
+libsdl2 (2.0.8+dfsg1-3.1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * d/tests/build: Add autopkgtest to check that dynamic linking with
+    either pkg-config or sdl2-config works correctly
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 30 Sep 2018 15:16:22 +0100
+
 libsdl2 (2.0.8+dfsg1-3) unstable; urgency=medium
 
   [ Hugh McMaster <hugh.mcmaster@outlook.com> ]
