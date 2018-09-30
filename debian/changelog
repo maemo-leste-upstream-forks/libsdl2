@@ -1,4 +1,4 @@
-libsdl2 (2.0.8+dfsg1-3.1) UNRELEASED; urgency=medium
+libsdl2 (2.0.8+dfsg1-3.1) unstable; urgency=medium
 
   * Non-maintainer upload.
   * d/tests/build: Add autopkgtest to check that dynamic linking with
@@ -6,7 +6,7 @@ libsdl2 (2.0.8+dfsg1-3.1) UNRELEASED; urgency=medium
   * Revert "Make libsdl2-dev coinstallable again"
     (Closes: #909778) (reopens: #909740)
 
- -- Simon McVittie <smcv@debian.org>  Sun, 30 Sep 2018 15:16:22 +0100
+ -- Simon McVittie <smcv@debian.org>  Sun, 30 Sep 2018 16:13:38 +0100
 
 libsdl2 (2.0.8+dfsg1-3) unstable; urgency=medium
 
