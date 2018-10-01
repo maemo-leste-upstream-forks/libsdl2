@@ -38,15 +38,6 @@ Files: src/main/winrt/SDL_winrt_main_NonXAML.cpp
 Copyright: 2014 David Ludwig
 License: PublicDomain_David_Ludwig
 
-Files: src/render/mmx.h
-Copyright: 1997-99 by H. Dietz and R. Fisher
-License: zlib/libpng
-Comment:
-  Copyright but no mention to license.
-  .
-  Included since long ago with SDL (and its Debian package) under directory
-  src/video/mmx.h
-
 Files: src/render/SDL_yuv_sw.c
 Copyright: 1995 Erik Corry
            1995 The Regents of the University of California
