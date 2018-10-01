@@ -12,11 +12,4 @@ trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
 cp -R * $WORKDIR
 cd $WORKDIR
 mkdir build && cd build
-CFLAGS="`pkg-config --cflags sdl2` -DHAVE_VULKAN_H"
-LDFLAGS=`pkg-config --libs sdl2`
-LIBS=`pkg-config --libs sdl2`
-export VERBOSE=1
-export CFLAGS
-export LDFLAGS
-export LIBS
 cmake .. -DSDL_TEST=ON && make && make test
