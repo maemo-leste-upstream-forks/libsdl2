@@ -1,0 +1,22 @@
+#!/bin/sh
+# autopkgtest check: Build and run a program against libsdl2,to verify that the
+# headers and pkg-config file are installed correctly
+# Original work: (C) 2013 Canonical Ltd.
+# Original author: Author: Vibhav Pant <vibhavp@ubuntu.com>
+# Adaptations to libsdl2-dev: (C) 2018 Gianfranco Costamagna <locutusofborg@debian.org>
+
+set -ex
+
+WORKDIR=$(mktemp -d)
+trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+cp -R * $WORKDIR
+cd $WORKDIR
+mkdir build && cd build
+CFLAGS="`pkg-config --cflags sdl2` -DHAVE_VULKAN_H"
+LDFLAGS=`pkg-config --libs sdl2`
+LIBS=`pkg-config --libs sdl2`
+export VERBOSE=1
+export CFLAGS
+export LDFLAGS
+export LIBS
+cmake .. -DSDL_TEST=ON && make && make test

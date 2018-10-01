@@ -1,3 +1,7 @@
 Tests: build
 Depends: libsdl2-dev, build-essential
 Restrictions: allow-stderr
+
+Tests: build-all
+Depends: @builddeps@, libsdl2-dev, cmake, build-essential
+Restrictions: allow-stderr

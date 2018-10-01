@@ -1,3 +1,13 @@
+libsdl2 (2.0.8+dfsg1-4) unstable; urgency=medium
+
+  * Team upload
+  * Ack previous NMU thanks!
+  * Also add the testsuite from test directory (from bug #909778)
+    - we need to find an approach to also run the resulting binaries
+      automatically
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 29 Sep 2018 11:10:36 +0200
+
 libsdl2 (2.0.8+dfsg1-3.1) unstable; urgency=medium
 
   * Non-maintainer upload.
