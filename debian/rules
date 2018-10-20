@@ -58,6 +58,12 @@ override_dh_auto_build-indep:
 	find output -name "jquery.js" -delete
 	dh_link -plibsdl2-doc usr/share/javascript/jquery/jquery.js usr/share/doc/libsdl2-doc/html/jquery.js
 
+# Force examples to be installed in libsdl2-doc, it does not happen with compat
+# level v11 despite having the file debian/libsdl2-doc.examples (it gets
+# installed as part of libsdl2-dev instead)
+override_dh_installexamples-indep:
+	dh_installexamples -i --doc-main-package=libsdl2-doc
+
 override_dh_auto_build-arch:
 	dh_auto_build -- V=1
 
