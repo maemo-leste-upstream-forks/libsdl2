@@ -313,7 +313,7 @@ libsdl2 (2.0.1+dfsg1-1) unstable; urgency=medium
     - Remove patch applied upstream:
       bug-723797-false_positives_in_mouse_wheel_code.patch
   * Bump Standards-Version to 3.9.5, no changes needed.
- 
+
   [ Felix Geyer ]
   * Import upstream gpg key for uscan to verify the orig tarball.
 
