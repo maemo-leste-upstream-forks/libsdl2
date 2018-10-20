@@ -4,6 +4,7 @@ libsdl2 (2.0.8+dfsg1-5) UNRELEASED; urgency=medium
   * d/rules: include /usr/share/dpkg/architecture.mk and .../pkg-info.mk
     to provide DEB_HOST_ARCH_CPU, DEB_HOST_MULTIARCH and
     SOURCE_DATE_EPOCH, instead of getting them through shell invocations.
+  * d/watch: Switch to version=4
 
  -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 20 Oct 2018 11:45:40 +0200
 
