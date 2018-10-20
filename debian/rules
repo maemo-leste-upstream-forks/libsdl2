@@ -1,9 +1,9 @@
 #!/usr/bin/make -f
 
-SHLIBVER = 2.0.8
+include /usr/share/dpkg/architecture.mk
+include /usr/share/dpkg/pkg-info.mk
 
-DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
-DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+SHLIBVER = 2.0.8
 
 confflags = --disable-rpath --enable-sdl-dlopen \
             --disable-nas --disable-esd --disable-arts \
@@ -41,9 +41,6 @@ ifeq (hurd,$(findstring hurd,$(DEB_HOST_ARCH_CPU)))
   confflags += --disable--video-opengles
 endif
 
-# for reproducible builds, timestamps_in_tarball
-SOURCE_DATE := $(shell dpkg-parsechangelog --show-field=Date)
-
 
 %:
 	dh $@
@@ -52,7 +49,7 @@ override_dh_auto_configure:
 	dh_auto_configure -- $(confflags)
 
 override_dh_auto_build-indep:
-	GZIP="-9n" tar czf debian/examples.tar.gz test --owner=0 --group=0 --mode=go=rX,u+rw,a-s --clamp-mtime --mtime="$(SOURCE_DATE)" --sort=name
+	GZIP="-9n" tar czf debian/examples.tar.gz test --owner=0 --group=0 --mode=go=rX,u+rw,a-s --clamp-mtime --mtime="$(SOURCE_DATE_EPOCH)" --sort=name
 	doxygen docs/doxyfile
 	# useless files
 	find output -name "*.md5" -delete
