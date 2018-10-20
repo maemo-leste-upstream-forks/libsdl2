@@ -1,4 +1,4 @@
-libsdl2 (2.0.8+dfsg1-5) UNRELEASED; urgency=medium
+libsdl2 (2.0.8+dfsg1-5) unstable; urgency=medium
 
   * Bump Policy Standards-Version to 4.2.1 (no changes needed)
   * d/rules: include /usr/share/dpkg/architecture.mk and .../pkg-info.mk
@@ -12,7 +12,7 @@ libsdl2 (2.0.8+dfsg1-5) UNRELEASED; urgency=medium
       the right pkg-config depending on the architecture (Closes: #907711)
       Thanks Helmut Grohne for the report and the patch.
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 20 Oct 2018 11:45:40 +0200
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 20 Oct 2018 12:51:58 +0200
 
 libsdl2 (2.0.8+dfsg1-4) unstable; urgency=medium
 
