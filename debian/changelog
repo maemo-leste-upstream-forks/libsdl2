@@ -1,9 +1,9 @@
-libsdl2 (2.0.8+dfsg1-6) UNRELEASED; urgency=medium
+libsdl2 (2.0.8+dfsg1-6) unstable; urgency=medium
 
   * d/rules: Add @ in 'tar --mtime="@$(SOURCE_DATE_EPOCH)"', otherwise the
     date is not valid
 
- -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Thu, 25 Oct 2018 01:41:30 +0200
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Thu, 25 Oct 2018 01:42:18 +0200
 
 libsdl2 (2.0.8+dfsg1-5) unstable; urgency=medium
 
