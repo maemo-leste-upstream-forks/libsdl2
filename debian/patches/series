@@ -1,3 +1,2 @@
 no-libdir.patch
-SDL2-dynapi-symbol-resolution-fix.patch
 fix-cross-building-907711.patch
