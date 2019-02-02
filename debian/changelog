@@ -2,6 +2,7 @@ libsdl2 (2.0.9+dfsg1-1) UNRELEASED; urgency=medium
 
   * New upstream release. (Closes: #914251)
   * Drop SDL2-dynapi-symbol-resolution-fix.patch, applied upstream.
+  * Refresh fix-cross-building-907711.patch
 
  -- Felix Geyer <fgeyer@debian.org>  Sat, 02 Feb 2019 15:45:35 +0100
 

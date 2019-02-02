@@ -27,7 +27,7 @@
          AC_MSG_CHECKING(for PulseAudio $PULSEAUDIO_REQUIRED_VERSION support)
 -        if test x$PKG_CONFIG != xno; then
 +        if test x$PKG_CONFIG != x; then
-         if $PKG_CONFIG --atleast-pkgconfig-version 0.7 && $PKG_CONFIG --atleast-version $PULSEAUDIO_REQUIRED_VERSION libpulse-simple; then
+             if $PKG_CONFIG --atleast-pkgconfig-version 0.7 && $PKG_CONFIG --atleast-version $PULSEAUDIO_REQUIRED_VERSION libpulse-simple; then
                  PULSEAUDIO_CFLAGS=`$PKG_CONFIG --cflags libpulse-simple`
                  PULSEAUDIO_LIBS=`$PKG_CONFIG --libs libpulse-simple`
 @@ -1165,9 +1164,8 @@
