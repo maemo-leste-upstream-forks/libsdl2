@@ -125,3 +125,13 @@
              FCITX_CFLAGS=`$PKG_CONFIG --cflags fcitx`
              CFLAGS="$CFLAGS $FCITX_CFLAGS"
              AC_CHECK_HEADER(fcitx/frontend.h,
+@@ -3296,8 +3296,7 @@
+                   , enable_hidapi=no)
+     if test x$enable_joystick = xyes -a x$enable_hidapi = xyes; then
+         hidapi_support=no
+-        AC_PATH_PROG(PKG_CONFIG, pkg-config, no)
+-        if test x$PKG_CONFIG != xno; then
++        if test x$PKG_CONFIG != x; then
+             LIBUSB_CFLAGS=`$PKG_CONFIG --cflags libusb-1.0`
+             LIBUSB_LDFLAGS=`$PKG_CONFIG --libs libusb-1.0`
+             save_CFLAGS="$CFLAGS"
