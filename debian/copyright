@@ -5,6 +5,12 @@ Source: https://www.libsdl.org/
 Files-Excluded: Android.mk
                 android-project
                 debian
+                src/hidapi/android
+                src/hidapi/ios
+                src/hidapi/linux
+                src/hidapi/mac
+                src/hidapi/testgui
+                src/hidapi/windows
                 VisualC
                 VisualC-WinRT
                 Xcode
