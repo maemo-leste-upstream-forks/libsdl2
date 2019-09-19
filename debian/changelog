@@ -3,6 +3,7 @@ libsdl2 (2.0.10+dfsg1-1) UNRELEASED; urgency=medium
   * New upstream release. (Closes: #939249)
   * Drop fix-cross-building-907711.patch, fixed upstream.
   * Add support for nodoc build-profile.
+  * Switch to debhelper compat level 12.
 
  -- Felix Geyer <fgeyer@debian.org>  Wed, 18 Sep 2019 21:28:15 +0200
 
