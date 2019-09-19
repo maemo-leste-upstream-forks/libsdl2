@@ -1,6 +1,10 @@
 libsdl2 (2.0.10+dfsg1-1) UNRELEASED; urgency=medium
 
   * New upstream release. (Closes: #939249)
+    - Fixes warnings with -Wundef on non-x86 hosts. (Closes: #892087)
+    - Fixes CVE-2019-7572, CVE-2019-7573, CVE-2019-7574, CVE-2019-7575,
+      CVE-2019-7576, CVE-2019-7577, CVE-2019-7578, CVE-2019-7635,
+      CVE-2019-7636, CVE-2019-7638 and CVE-2019-13626 (Closes: #924610)
   * Drop fix-cross-building-907711.patch, fixed upstream.
   * Bump SHLIBVER to 2.0.10.
   * Add support for nodoc build-profile.
