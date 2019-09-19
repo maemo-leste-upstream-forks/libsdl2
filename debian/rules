@@ -48,6 +48,8 @@ endif
 override_dh_auto_configure:
 	dh_auto_configure -- $(confflags)
 
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+
 override_dh_auto_build-indep:
 	GZIP="-9n" tar czf debian/examples.tar.gz test --owner=0 --group=0 --mode=go=rX,u+rw,a-s --clamp-mtime --mtime="@$(SOURCE_DATE_EPOCH)" --sort=name
 	doxygen docs/doxyfile
@@ -63,6 +65,8 @@ override_dh_auto_build-indep:
 # installed as part of libsdl2-dev instead)
 override_dh_installexamples-indep:
 	dh_installexamples -i --doc-main-package=libsdl2-doc
+
+endif # !nocheck
 
 override_dh_auto_build-arch:
 	dh_auto_build -- V=1
