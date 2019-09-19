@@ -2,6 +2,7 @@ libsdl2 (2.0.10+dfsg1-1) UNRELEASED; urgency=medium
 
   * New upstream release. (Closes: #939249)
   * Drop fix-cross-building-907711.patch, fixed upstream.
+  * Bump SHLIBVER to 2.0.10.
   * Add support for nodoc build-profile.
   * Switch to debhelper compat level 12.
 
