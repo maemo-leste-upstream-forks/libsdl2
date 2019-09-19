@@ -9,6 +9,7 @@ libsdl2 (2.0.10+dfsg1-1) UNRELEASED; urgency=medium
   * Bump SHLIBVER to 2.0.10.
   * Add support for nodoc build-profile.
   * Switch to debhelper compat level 12.
+  * Cherry-pick upstream fix for CVE-2019-13616.
 
  -- Felix Geyer <fgeyer@debian.org>  Wed, 18 Sep 2019 21:28:15 +0200
 
