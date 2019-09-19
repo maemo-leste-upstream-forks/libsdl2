@@ -77,7 +77,7 @@ override_dh_auto_clean-indep:
 	rm -rf output
 
 override_dh_missing:
-	dh_missing --fail-missing -XlibSDL2.la -XlibSDL2main.la -XlibSDL2_test.la
+	dh_missing --fail-missing
 
 override_dh_link:
 	# to address lintian warning
