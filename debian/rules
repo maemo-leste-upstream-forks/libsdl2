@@ -3,7 +3,7 @@
 include /usr/share/dpkg/architecture.mk
 include /usr/share/dpkg/pkg-info.mk
 
-SHLIBVER = 2.0.9
+SHLIBVER = 2.0.10
 
 confflags = --disable-rpath --enable-sdl-dlopen \
             --disable-nas --disable-esd --disable-arts \
