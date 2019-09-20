@@ -1,4 +1,4 @@
-libsdl2 (2.0.10+dfsg1-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.10+dfsg1-1) unstable; urgency=medium
 
   * New upstream release. (Closes: #939249)
     - Fixes warnings with -Wundef on non-x86 hosts. (Closes: #892087)
@@ -12,7 +12,7 @@ libsdl2 (2.0.10+dfsg1-1) UNRELEASED; urgency=medium
   * Cherry-pick upstream fix for CVE-2019-13616.
   * Mark autopkgtests as superficial.
 
- -- Felix Geyer <fgeyer@debian.org>  Wed, 18 Sep 2019 21:28:15 +0200
+ -- Felix Geyer <fgeyer@debian.org>  Thu, 19 Sep 2019 23:50:39 +0200
 
 libsdl2 (2.0.9+dfsg1-1) unstable; urgency=medium
 
