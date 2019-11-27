@@ -92,6 +92,7 @@ Depends:
  libxt-dev,
  libxv-dev,
  libxxf86vm-dev,
+ pkg-config,
  ${misc:Depends}
 Conflicts:
  libsdl-1.3-dev
