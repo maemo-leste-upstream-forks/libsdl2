@@ -66,6 +66,7 @@ Description: Simple DirectMedia Layer
 Package: libsdl2-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends:
  libasound2-dev [linux-any],
  libdbus-1-dev,
