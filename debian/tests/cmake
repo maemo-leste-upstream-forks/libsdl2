@@ -1,0 +1,20 @@
+#!/bin/sh
+# Copyright 2019 Collabora Ltd.
+# SPDX-License-Identifier: Zlib
+# (see "zlib/libpng" in debian/copyright)
+
+set -eux
+
+tmpdir="$(mktemp -d)"
+cleanup () {
+    rm -fr "$tmpdir"
+}
+
+srcdir="$(pwd)"
+(
+    cd "$tmpdir"
+    cmake "$srcdir/debian/tests/cmake-example"
+)
+make -C "$tmpdir" VERBOSE=1
+"$tmpdir/hello"
+make -C "$tmpdir" VERBOSE=1 clean
