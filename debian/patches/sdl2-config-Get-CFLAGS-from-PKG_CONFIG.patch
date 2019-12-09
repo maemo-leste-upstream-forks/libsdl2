@@ -1,0 +1,63 @@
+From: Simon McVittie <smcv@debian.org>
+Date: Wed, 27 Nov 2019 17:36:19 +0000
+Subject: sdl2-config: Get CFLAGS from $PKG_CONFIG
+
+If we want libsdl2-dev to be multiarch co-installable, then we cannot
+include @includedir@ in sdl2-config, because that would make the package
+non-co-installable between architectures. Instead, ask ${PKG_CONFIG}.
+
+This assumes that during cross-compilation, PKG_CONFIG will have been
+set to an appropriate value, even if the build system of the software
+being cross-compiled does not (directly) use pkg-config.
+
+Loosely based on a patch by Hugh McMaster.
+
+Bug-Debian: https://bugs.debian.org/909778
+Forwarded: no, Debian-specific
+---
+ sdl2-config.in | 13 +++++++++----
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+
+diff --git a/sdl2-config.in b/sdl2-config.in
+index 254a345..c2425b6 100644
+--- a/sdl2-config.in
++++ b/sdl2-config.in
+@@ -3,7 +3,6 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ exec_prefix_set=no
+-libdir=@libdir@
+ 
+ @ENABLE_STATIC_FALSE@usage="\
+ @ENABLE_STATIC_FALSE@Usage: $0 [--prefix[=DIR]] [--exec-prefix[=DIR]] [--version] [--cflags] [--libs]"
+@@ -15,6 +14,12 @@ if test $# -eq 0; then
+       exit 1
+ fi
+ 
++PKG_CONFIG="${PKG_CONFIG-pkg-config}"
++
++call_pkg_config () {
++  ${PKG_CONFIG} --define-variable="prefix=$prefix" --define-variable="exec_prefix=$exec_prefix" "$@"
++}
++
+ while test $# -gt 0; do
+   case "$1" in
+   -*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+@@ -42,14 +47,14 @@ while test $# -gt 0; do
+       echo @SDL_VERSION@
+       ;;
+     --cflags)
+-      echo -I@includedir@/SDL2 @SDL_CFLAGS@
++      call_pkg_config --cflags sdl2
+       ;;
+ @ENABLE_SHARED_TRUE@    --libs)
+-@ENABLE_SHARED_TRUE@      echo -L@libdir@ @SDL_RLD_FLAGS@ @SDL_LIBS@
++@ENABLE_SHARED_TRUE@      call_pkg_config --libs sdl2
+ @ENABLE_SHARED_TRUE@      ;;
+ @ENABLE_STATIC_TRUE@@ENABLE_SHARED_TRUE@    --static-libs)
+ @ENABLE_STATIC_TRUE@@ENABLE_SHARED_FALSE@    --libs|--static-libs)
+-@ENABLE_STATIC_TRUE@      echo -L@libdir@ @SDL_RLD_FLAGS@ @SDL_STATIC_LIBS@
++@ENABLE_STATIC_TRUE@      call_pkg_config --static --libs sdl2
+ @ENABLE_STATIC_TRUE@      ;;
+     *)
+       echo "${usage}" 1>&2
