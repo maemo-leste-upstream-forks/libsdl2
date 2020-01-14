@@ -9,7 +9,19 @@ set -ex
 
 WORKDIR=$(mktemp -d)
 trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    cat <<EOF > "$WORKDIR/toolchain.cmake"
+set(CMAKE_C_COMPILER $DEB_HOST_GNU_TYPE-gcc)
+set(CMAKE_CXX_COMPILER $DEB_HOST_GNU_TYPE-g++)
+set(PKG_CONFIG_EXECUTABLE $DEB_HOST_GNU_TYPE-pkg-config)
+EOF
+    CCFILE=-DCMAKE_TOOLCHAIN_FILE="$WORKDIR/toolchain.cmake"
+else
+    CCFILE=
+fi
+
 cp -R * $WORKDIR
 cd $WORKDIR
 mkdir build && cd build
-cmake .. -DSDL_TEST=ON && make && make test
+cmake .. $CCFILE -DSDL_TEST=ON && make && make test

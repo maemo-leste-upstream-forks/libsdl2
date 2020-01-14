@@ -16,6 +16,13 @@ mode=dynamic
 
 WORKDIR=$(mktemp -d)
 trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    CROSS_COMPILE="$DEB_HOST_GNU_TYPE-"
+else
+    CROSS_COMPILE=
+fi
+
 cd $WORKDIR
 cat <<EOF > use-sdl.c
 #undef NDEBUG
@@ -53,10 +60,10 @@ for tool in pkg-config sdl2-config; do
 
     case "$tool" in
     (pkg-config)
-        gcc $cflags -o use-${tool}-${mode} use-sdl.c `pkg-config $pcflags --cflags --libs sdl2`
+        ${CROSS_COMPILE}gcc $cflags -o use-${tool}-${mode} use-sdl.c `${CROSS_COMPILE}pkg-config $pcflags --cflags --libs sdl2`
         ;;
     (sdl2-config)
-        gcc $cflags -o use-${tool}-${mode} use-sdl.c `sdl2-config --cflags $scflags`
+        ${CROSS_COMPILE}gcc $cflags -o use-${tool}-${mode} use-sdl.c `sdl2-config --cflags $scflags`
         ;;
     (*)
         exit 1

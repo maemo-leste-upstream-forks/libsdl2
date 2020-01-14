@@ -5,16 +5,27 @@
 
 set -eux
 
-tmpdir="$(mktemp -d)"
+WORKDIR="$(mktemp -d)"
 cleanup () {
-    rm -fr "$tmpdir"
+    rm -fr "$WORKDIR"
 }
+
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    cat <<EOF > "$WORKDIR/toolchain.cmake"
+set(CMAKE_C_COMPILER $DEB_HOST_GNU_TYPE-gcc)
+set(CMAKE_CXX_COMPILER $DEB_HOST_GNU_TYPE-g++)
+set(PKG_CONFIG_EXECUTABLE $DEB_HOST_GNU_TYPE-pkg-config)
+EOF
+    CCFILE=-DCMAKE_TOOLCHAIN_FILE="$WORKDIR/toolchain.cmake"
+else
+    CCFILE=
+fi
 
 srcdir="$(pwd)"
 (
-    cd "$tmpdir"
-    cmake "$srcdir/debian/tests/cmake-example"
+    cd "$WORKDIR"
+    cmake $CCFILE "$srcdir/debian/tests/cmake-example"
 )
-make -C "$tmpdir" VERBOSE=1
-"$tmpdir/hello"
-make -C "$tmpdir" VERBOSE=1 clean
+make -C "$WORKDIR" VERBOSE=1
+"$WORKDIR/hello"
+make -C "$WORKDIR" VERBOSE=1 clean
