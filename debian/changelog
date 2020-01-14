@@ -1,5 +1,6 @@
 libsdl2 (2.0.10+dfsg1-2) UNRELEASED; urgency=medium
 
+  [ Simon McVittie ]
   * d/tests: Add a test that detecting SDL2 via CMake does not regress.
     This is the sort of thing that could easily regress while solving #909740.
   * Install all headers in an architecture-specific location.
@@ -20,6 +21,17 @@ libsdl2 (2.0.10+dfsg1-2) UNRELEASED; urgency=medium
     because that file is installed to an architecture-specific location
     anyway, namely ${libdir}/cmake.
   * Mark libsdl2-dev as Multi-Arch: same (Closes: #909740)
+
+  [ Gianfranco Costamagna ]
+  * Upload part of Ubuntu delta to Debian
+
+  [ Timo Aaltonen ]
+  * rules: Disable GLES1, it's getting enabled because libgles-dev ships
+    GLES1 headers now, but they have conflicting types against the ones
+    SDL has.
+
+  [ Steve Langasek ]
+  * Make autopkgtests cross-test-friendly.
 
  -- Simon McVittie <smcv@debian.org>  Wed, 27 Nov 2019 17:40:02 +0000
 
