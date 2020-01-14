@@ -11,6 +11,7 @@ confflags = --disable-rpath --enable-sdl-dlopen \
             --enable-ibus \
             --disable-x11-shared --disable-video-directfb \
             --enable-video-opengles \
+            --disable-video-opengles1 \
             --enable-video-wayland --disable-wayland-shared \
             --includedir='$${prefix}/include/$(DEB_HOST_MULTIARCH)'
 
