@@ -2,10 +2,6 @@ Tests: build
 Depends: libsdl2-dev, build-essential
 Restrictions: superficial, allow-stderr
 
-Tests: build-all
-Depends: @builddeps@, libsdl2-dev, cmake, build-essential
-Restrictions: superficial, allow-stderr
-
 Tests: cmake
 Depends: build-essential, cmake, libsdl2-dev
 Restrictions: superficial, allow-stderr

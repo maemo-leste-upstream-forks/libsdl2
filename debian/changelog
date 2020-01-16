@@ -33,6 +33,13 @@ libsdl2 (2.0.10+dfsg1-2) UNRELEASED; urgency=medium
   [ Steve Langasek ]
   * Make autopkgtests cross-test-friendly. (Closes: #946496)
 
+  [ Felix Geyer ]
+  * Drop build-all autopkgtest.
+    - We already have tests that check if building against SDL2 with pkg-config,
+      sdl2-config and cmake works correctly.
+    - It has a large overhead as it rebuilds SDL2 and requires supporting
+      cmake as a second buildsystem.
+
  -- Simon McVittie <smcv@debian.org>  Wed, 27 Nov 2019 17:40:02 +0000
 
 libsdl2 (2.0.10+dfsg1-1) unstable; urgency=medium
