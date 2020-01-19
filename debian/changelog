@@ -39,6 +39,7 @@ libsdl2 (2.0.10+dfsg1-2) UNRELEASED; urgency=medium
       sdl2-config and cmake works correctly.
     - It has a large overhead as it rebuilds SDL2 and requires supporting
       cmake as a second buildsystem.
+  * Add the non-multiarch include dir to pkg-config cflags for compatibility.
 
  -- Simon McVittie <smcv@debian.org>  Wed, 27 Nov 2019 17:40:02 +0000
 
