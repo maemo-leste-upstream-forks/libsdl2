@@ -44,7 +44,7 @@ for tool in pkg-config sdl2-config; do
         ;;
     (sdl2-config)
         # shellcheck disable=SC2046
-        "${CROSS_COMPILE}gcc" -o "use-${tool}" use-sdl.c $(sdl2-config --cflags --libs) -lSDL2_ttf
+        "${CROSS_COMPILE}gcc" -o "use-${tool}" use-sdl.c $(PKG_CONFIG="${CROSS_COMPILE}pkg-config" sdl2-config --cflags --libs) -lSDL2_ttf
         ;;
     (*)
         exit 1
