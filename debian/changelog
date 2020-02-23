@@ -1,3 +1,22 @@
+libsdl2 (2.0.10+dfsg1-3) UNRELEASED; urgency=medium
+
+  [ Gianfranco Costamagna ]
+  * Fix autopkgtests for cross-architecture testing, by making sure
+    sdl2-config calls the correct pkg-config command
+
+  [ Simon McVittie ]
+  * Revert "Add the non-multiarch include dir to pkg-config cflags for
+    compatibility."
+  * Revert "Install all headers in an architecture-specific location"
+  * Make SDL_config.h redirect to an architecture-specific version
+    (Closes: #909740, #951087, #951943, #951959, #951974, #951976, #952049,
+    #951962, #952105, #955416)
+  * Create a SDL_platform.h symlink in /usr/include/MULTIARCH/SDL2
+    (Closes: #952046, #952066, #952098)
+  * Add autopkgtests for various deprecated use patterns
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 20:47:14 +0000
+
 libsdl2 (2.0.10+dfsg1-2) unstable; urgency=medium
 
   [ Simon McVittie ]
