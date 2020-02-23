@@ -80,6 +80,7 @@ override_dh_auto_clean-indep:
 override_dh_install:
 	mkdir -p debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/SDL2
 	mv debian/tmp/usr/include/SDL2/SDL_config.h debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/SDL2/_real_SDL_config.h
+	ln -s ../../SDL2/SDL_platform.h debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/SDL2/
 	dh_install
 
 override_dh_missing:
