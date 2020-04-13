@@ -12,8 +12,7 @@ confflags = --disable-rpath --enable-sdl-dlopen \
             --disable-x11-shared --disable-video-directfb \
             --enable-video-opengles \
             --disable-video-opengles1 \
-            --enable-video-wayland --disable-wayland-shared \
-            --includedir='$${prefix}/include/$(DEB_HOST_MULTIARCH)'
+            --enable-video-wayland --disable-wayland-shared
 
 # disable autoheader (invoked automatically by autoreconf), necessary in order
 # to use debhelper compat level v10 without overriding dh-autoreconf calls
@@ -77,6 +76,12 @@ override_dh_auto_clean-indep:
 	dh_auto_clean
 	rm -f debian/examples.tar.gz
 	rm -rf output
+
+override_dh_install:
+	mkdir -p debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/SDL2
+	mv debian/tmp/usr/include/SDL2/SDL_config.h debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/SDL2/_real_SDL_config.h
+	ln -s ../../SDL2/SDL_platform.h debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/SDL2/
+	dh_install
 
 override_dh_missing:
 	dh_missing --fail-missing

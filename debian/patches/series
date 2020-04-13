@@ -1,3 +1,2 @@
+no-libdir.patch
 CVE-2019-13616.patch
-sdl2-config-Get-CFLAGS-from-PKG_CONFIG.patch
-pkg-config-non-multiarch-include-dir.patch
