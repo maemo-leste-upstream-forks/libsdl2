@@ -1,4 +1,6 @@
-libsdl2 (2.0.10+dfsg1-3) UNRELEASED; urgency=medium
+libsdl2 (2.0.10+dfsg1-3) unstable; urgency=medium
+
+  * Team upload
 
   [ Gianfranco Costamagna ]
   * Fix autopkgtests for cross-architecture testing, by making sure
@@ -15,7 +17,7 @@ libsdl2 (2.0.10+dfsg1-3) UNRELEASED; urgency=medium
     (Closes: #952046, #952066, #952098)
   * Add autopkgtests for various deprecated use patterns
 
- -- Simon McVittie <smcv@debian.org>  Sun, 23 Feb 2020 20:47:14 +0000
+ -- Simon McVittie <smcv@debian.org>  Mon, 13 Apr 2020 18:27:11 +0100
 
 libsdl2 (2.0.10+dfsg1-2) unstable; urgency=medium
 
