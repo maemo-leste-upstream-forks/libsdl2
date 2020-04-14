@@ -1,10 +1,15 @@
-libsdl2 (2.0.12+dfsg1-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.12+dfsg1-1~exp1) UNRELEASED; urgency=medium
 
   * New upstream release
     - d/copyright: Update
     - d/copyright, d/gbp.conf: Exclude compiled shaders for macOS etc.
     - d/copyright, d/gbp.conf: Exclude non-free Steam Controller headers
       (hopefully these can be relicensed for a future version)
+
+  [ Gianfranco Costamagna ]
+  * Drop CVE-2019-13616: upstream
+  * Refresh no-libdir patch
+  * Also install sdl2-config-version.cmake file
 
  -- Simon McVittie <smcv@debian.org>  Tue, 14 Apr 2020 10:23:42 +0100
 
