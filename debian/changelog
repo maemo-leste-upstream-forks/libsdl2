@@ -7,9 +7,14 @@ libsdl2 (2.0.12+dfsg1-1~exp1) UNRELEASED; urgency=medium
       (hopefully these can be relicensed for a future version)
 
   [ Gianfranco Costamagna ]
+  * Update copyright years
   * Drop CVE-2019-13616: upstream
   * Refresh no-libdir patch
-  * Also install sdl2-config-version.cmake file
+  * Also install the sdl2-config-version.cmake file
+  * Remove old dbgsym migration command
+  * Remove signatures from signing key
+  * Bump std-version to 4.5.0
+  * Add Rules-Requires-Root: no
 
  -- Simon McVittie <smcv@debian.org>  Tue, 14 Apr 2020 10:23:42 +0100
 
