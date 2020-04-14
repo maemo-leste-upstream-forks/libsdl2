@@ -114,7 +114,7 @@ License: zlib/libpng
 Comment: No specific information about the images
 
 Files: debian/*
-Copyright: 2015, Gianfranco Costamagna <locutusofborg@debian.org>
+Copyright: 2015-2020, Gianfranco Costamagna <locutusofborg@debian.org>
            2011-2013, Manuel A. Fernandez Montecelo <mafm@debian.org>
            2011-2013, Felix Geyer <fgeyer@debian.org>
            2011, Roman Vasiyarov <rvasiyarov@gmail.com>
