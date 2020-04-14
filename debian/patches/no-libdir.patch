@@ -1,9 +1,11 @@
 Description: This makes the -dev package multiarch
 Author: Gianfranco Costamagna <locutusofborg@debian.org>
 
---- libsdl2-2.0.5+dfsg1.orig/sdl2-config.cmake.in
-+++ libsdl2-2.0.5+dfsg1/sdl2-config.cmake.in
-@@ -5,7 +5,6 @@ set(exec_prefix "@exec_prefix@")
+Index: libsdl2/sdl2-config.cmake.in
+===================================================================
+--- libsdl2.orig/sdl2-config.cmake.in
++++ libsdl2/sdl2-config.cmake.in
+@@ -5,9 +5,8 @@
  set(libdir "@libdir@")
  set(SDL2_PREFIX "@prefix@")
  set(SDL2_EXEC_PREFIX "@prefix@")
@@ -12,8 +14,12 @@ Author: Gianfranco Costamagna <locutusofborg@debian.org>
 -set(SDL2_LIBRARIES "-L${SDL2_LIBDIR} @SDL_RLD_FLAGS@ @SDL_LIBS@")
 +set(SDL2_LIBRARIES "@SDL_RLD_FLAGS@ @SDL_LIBS@")
  string(STRIP "${SDL2_LIBRARIES}" SDL2_LIBRARIES)
---- libsdl2-2.0.5+dfsg1.orig/sdl2-config.in
-+++ libsdl2-2.0.5+dfsg1/sdl2-config.in
+ 
+ if(NOT TARGET SDL2::SDL2)
+Index: libsdl2/sdl2-config.in
+===================================================================
+--- libsdl2.orig/sdl2-config.in
++++ libsdl2/sdl2-config.in
 @@ -3,7 +3,6 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -22,7 +28,7 @@ Author: Gianfranco Costamagna <locutusofborg@debian.org>
  
  @ENABLE_STATIC_FALSE@usage="\
  @ENABLE_STATIC_FALSE@Usage: $0 [--prefix[=DIR]] [--exec-prefix[=DIR]] [--version] [--cflags] [--libs]"
-@@ -45,11 +44,11 @@ while test $# -gt 0; do
+@@ -45,11 +44,11 @@
        echo -I@includedir@/SDL2 @SDL_CFLAGS@
        ;;
  @ENABLE_SHARED_TRUE@    --libs)
