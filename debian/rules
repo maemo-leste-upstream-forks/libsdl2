@@ -3,7 +3,7 @@
 include /usr/share/dpkg/architecture.mk
 include /usr/share/dpkg/pkg-info.mk
 
-SHLIBVER = 2.0.12
+SHLIBVER ?= $(shell echo $(DEB_VERSION_UPSTREAM) |cut -f 1 -d "+")
 
 confflags = --disable-rpath --enable-sdl-dlopen \
             --disable-nas --disable-esd --disable-arts \
