@@ -11,14 +11,21 @@ Files-Excluded: Android.mk
                 src/hidapi/mac
                 src/hidapi/testgui
                 src/hidapi/windows
+                src/joystick/hidapi/steam/controller_constants.h
+                src/joystick/hidapi/steam/controller_structs.h
+                src/render/metal/SDL_shaders_metal_*.h
                 VisualC
                 VisualC-WinRT
                 Xcode
                 Xcode-iOS
 
 Files: *
-Copyright: 1997-2017 Sam Lantinga <slouken@libsdl.org>
-License: zlib/libpng
+Copyright:
+ 1997-2020 Sam Lantinga <slouken@libsdl.org>
+ 2012 Raspberry Pi Foundation
+ 2012-2018 RISC OS Open Ltd
+ 2018-2019 EXL
+License: zlib/libpng and zlib-libpng-like-permissive
 
 Files: include/SDL_opengl_glext.h
        include/SDL_opengles2_khrplatform.h
@@ -58,6 +65,14 @@ Files: src/test/SDL_test_md5.c include/SDL_test_md5.h
 Copyright: 1997-2012 Sam Lantinga <slouken@libsdl.org>
            1990-1991 RSA Data Security, Inc.
 License: zlib/libpng and RSA_Data_Security
+
+Files:
+ src/video/arm/pixman-arm-asm.h
+ src/video/arm/pixman-arm-neon-asm.S
+ src/video/arm/pixman-arm-neon-asm.h
+Copyright:
+ 2009-2010 Nokia Corporation
+License: Mozilla-permissive and Expat and zlib/libpng
 
 Files: src/video/haiku/SDL_bkeyboard.cc
        src/video/haiku/SDL_bkeyboard.h
@@ -150,6 +165,26 @@ License: SGI-Free-Software-License-B
  other dealings in this Software without prior written authorization from
  Silicon Graphics, Inc.
 
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction, including without limitation
+ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice (including the next
+ paragraph) shall be included in all copies or substantial portions of the
+ Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ DEALINGS IN THE SOFTWARE.
+
 License: Expat-like
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and/or associated documentation files (the
@@ -186,6 +221,15 @@ License: zlib/libpng
  2. Altered source versions must be plainly marked as such, and must not be
     misrepresented as being the original software.
  3. This notice may not be removed or altered from any source distribution.
+
+License: zlib-libpng-like-permissive
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+  .
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely.
 
 License: LGPL-2.1+
  This program is free software; you can redistribute it and/or modify
@@ -451,3 +495,23 @@ License: RSA_Data_Security
  ** These notices must be retained in any copies of any part of this  **
  ** documentation and/or software.                                    **
  ***********************************************************************
+
+License: Mozilla-permissive
+ Permission to use, copy, modify, distribute, and sell this software and its
+ documentation for any purpose is hereby granted without fee, provided that
+ the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation, and that the name of Mozilla Corporation not be used in
+ advertising or publicity pertaining to distribution of the software without
+ specific, written prior permission.  Mozilla Corporation makes no
+ representations about the suitability of this software for any purpose.  It
+ is provided "as is" without express or implied warranty.
+ .
+ THE COPYRIGHT HOLDERS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS
+ SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ FITNESS, IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN
+ AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
+ OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+ SOFTWARE.
