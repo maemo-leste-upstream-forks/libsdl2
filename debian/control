@@ -43,6 +43,7 @@ Build-Depends-Indep:
 Vcs-Git: https://salsa.debian.org/sdl-team/libsdl2.git
 Vcs-Browser: https://salsa.debian.org/sdl-team/libsdl2
 Homepage: https://www.libsdl.org/
+Rules-Requires-Root: no
 
 Package: libsdl2-2.0-0
 Architecture: any
