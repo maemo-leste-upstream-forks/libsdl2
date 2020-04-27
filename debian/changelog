@@ -1,6 +1,7 @@
 libsdl2 (2.0.12+dfsg1-1~exp1) UNRELEASED; urgency=medium
 
-  * New upstream release
+  [ Simon McVittie ]
+  * New upstream release (Closes: #954660)
     - d/copyright: Update
     - d/copyright, d/gbp.conf: Exclude compiled shaders for macOS etc.
     - d/copyright, d/gbp.conf: Exclude non-free Steam Controller headers
