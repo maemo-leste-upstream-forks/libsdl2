@@ -1,11 +1,15 @@
-libsdl2 (2.0.12+dfsg1-1~exp1) UNRELEASED; urgency=medium
+libsdl2 (2.0.12+dfsg1-1~exp1) experimental; urgency=medium
+
+  * Team upload
 
   [ Simon McVittie ]
   * New upstream release (Closes: #954660)
     - d/copyright: Update
     - d/copyright, d/gbp.conf: Exclude compiled shaders for macOS etc.
     - d/copyright, d/gbp.conf: Exclude non-free Steam Controller headers
-      (hopefully these can be relicensed for a future version)
+      (these have been relicensed in the hg repository, so the exclusion
+      can probably be dropped with 2.0.14, but as far as I can see they're
+      only used on non-Linux platforms anyway)
   * Remove SHLIBVER, rely on debhelper compat 12 defaults
 
   [ Gianfranco Costamagna ]
@@ -18,7 +22,7 @@ libsdl2 (2.0.12+dfsg1-1~exp1) UNRELEASED; urgency=medium
   * Bump std-version to 4.5.0
   * Add Rules-Requires-Root: no
 
- -- Simon McVittie <smcv@debian.org>  Mon, 27 Apr 2020 09:41:50 +0100
+ -- Simon McVittie <smcv@debian.org>  Mon, 27 Apr 2020 14:19:49 +0100
 
 libsdl2 (2.0.10+dfsg1-3) unstable; urgency=medium
 
