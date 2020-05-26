@@ -1,3 +1,18 @@
+libsdl2 (2.0.12+dfsg1-1) UNRELEASED; urgency=medium
+
+  * Upload v2.0.12 to unstable
+  * d/tests/build: Exercise compilation using clang
+  * d/rules: Provide compatibility symlinks to begin_code.h, close_code.h.
+    If a project that (incorrectly?) #includes <SDL2/SDL_foo.h>, such as
+    jag_0.3.5-5, is compiled with gcc, our symlink to SDL_platform.h is
+    sufficient to make it work. However, when compiled with clang, we need
+    to provide symlinks to everything that is required by SDL_config.h,
+    recursively, due to different symlink behaviour between gcc and clang.
+    (This is a variation on #952066.)
+  * d/tests: Exercise the #952066-like situation with clang
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 26 May 2020 14:12:08 +0100
+
 libsdl2 (2.0.12+dfsg1-1~exp1) experimental; urgency=medium
 
   * Team upload
