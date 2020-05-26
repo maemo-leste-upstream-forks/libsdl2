@@ -46,32 +46,45 @@ int main(void)
 EOF
 
 for tool in pkg-config sdl2-config; do
-    cflags=
-    pcflags=
-    scflags=--libs
+    for cc in "${CROSS_COMPILE}gcc" clang; do
+        cflags=
+        pcflags=
+        scflags=--libs
 
-    case "$mode" in
-    (static)
-        cflags=-static
-        pcflags=--static
-        scflags=--static-libs
-        ;;
-    esac
+        case "$mode" in
+        (static)
+            cflags=-static
+            pcflags=--static
+            scflags=--static-libs
+            ;;
+        esac
 
-    case "$tool" in
-    (pkg-config)
-        "${CROSS_COMPILE}gcc" $cflags -o "use-${tool}-${mode}" use-sdl.c $("${CROSS_COMPILE}pkg-config" $pcflags --cflags --libs sdl2)
-        ;;
-    (sdl2-config)
-        "${CROSS_COMPILE}gcc" $cflags -o "use-${tool}-${mode}" use-sdl.c $(PKG_CONFIG="${CROSS_COMPILE}pkg-config" sdl2-config --cflags $scflags)
-        ;;
-    (*)
-        exit 1
-        ;;
-    esac
+        case "$cc" in
+        (clang)
+            cflags="$cflags ${DEB_HOST_GNU_TYPE:+--target="${DEB_HOST_GNU_TYPE}"}"
+            ;;
+        esac
 
-    echo "build (with $tool, $mode): OK"
-    [ -x use-${tool}-${mode} ]
-    ./use-${tool}-${mode}
-    echo "run (with $tool, $mode): OK"
+        exe="use-${tool}-${cc}-${mode}"
+
+        case "$tool" in
+        (pkg-config)
+            # Deliberately word-splitting cflags, pcflags, pkg-config output
+            # shellcheck disable=SC2046,SC2086
+            "$cc" $cflags -o "${exe}" use-sdl.c $("${CROSS_COMPILE}pkg-config" $pcflags --cflags --libs sdl2)
+            ;;
+        (sdl2-config)
+            # shellcheck disable=SC2046,SC2086
+            "$cc" $cflags -o "${exe}" use-sdl.c $(PKG_CONFIG="${CROSS_COMPILE}pkg-config" sdl2-config --cflags $scflags)
+            ;;
+        (*)
+            exit 1
+            ;;
+        esac
+
+        echo "build (with $tool, $cc, $mode): OK"
+        [ -x "${exe}" ]
+        ./"${exe}"
+        echo "run (with $tool, $cc, $mode): OK"
+    done
 done

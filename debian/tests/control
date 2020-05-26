@@ -1,5 +1,5 @@
 Tests: build
-Depends: build-essential, libsdl2-dev
+Depends: build-essential, clang, libsdl2-dev
 Restrictions: superficial, allow-stderr
 
 Tests: cmake
