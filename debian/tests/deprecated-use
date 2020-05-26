@@ -124,3 +124,15 @@ echo "build (assuming <SDL2/*.h> and -lSDL2* in default search paths): OK"
 [ -x use-ttf ]
 ./use-ttf
 echo "run: OK"
+
+# clang has different symlink behaviour, so building jag_0.3.5-5 etc.
+# with clang would have a different failure mode. Test that too.
+
+clang ${DEB_HOST_GNU_TYPE:+--target="${DEB_HOST_GNU_TYPE}"} -o use-sdl use-sdl.c -DWRONG_INCLUDE_PATH -lSDL2
+clang ${DEB_HOST_GNU_TYPE:+--target="${DEB_HOST_GNU_TYPE}"} -o use-ttf use-ttf.c -DWRONG_INCLUDE_PATH -lSDL2 -lSDL2_ttf
+echo "build (clang, assuming <SDL2/*.h> and -lSDL2* in default search paths): OK"
+[ -x use-sdl ]
+./use-sdl
+[ -x use-ttf ]
+./use-ttf
+echo "run: OK"
