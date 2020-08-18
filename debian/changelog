@@ -1,10 +1,15 @@
-libsdl2 (2.0.12+dfsg1-2) UNRELEASED; urgency=medium
+libsdl2 (2.0.12+dfsg1-2) unstable; urgency=medium
+
+  * Team upload
 
   [ Steve Langasek ]
   * use clang:native instead of clang in autopkgtests, to make
     them cross-testing friendly
 
- -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 27 May 2020 19:15:26 +0200
+  [ RALOVICH, Kristof ]
+  * debian: enable kmsdrm video driver as well
+
+ -- Fabian Greffrath <fabian@debian.org>  Tue, 18 Aug 2020 11:15:22 +0200
 
 libsdl2 (2.0.12+dfsg1-1) unstable; urgency=medium
 
