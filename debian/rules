@@ -7,6 +7,7 @@ confflags = --disable-rpath --enable-sdl-dlopen \
             --disable-nas --disable-esd --disable-arts \
             --disable-alsa-shared --disable-pulseaudio-shared \
             --enable-ibus \
+            --enable-input-tslib \
             --disable-x11-shared --disable-video-directfb \
             --enable-video-opengles \
             --disable-video-opengles1 \
