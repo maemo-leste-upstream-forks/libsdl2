@@ -1,3 +1,11 @@
+libsdl2 (2.0.12+dfsg1-3) unstable; urgency=medium
+
+  * Team upload
+  * Add libdrm-dev to Build-Depends to get the kmsdrm video driver
+    working, thanks Matthew Harm Bekkema (Closes: #971529).
+
+ -- Fabian Greffrath <fabian@debian.org>  Sat, 03 Oct 2020 22:11:05 +0200
+
 libsdl2 (2.0.12+dfsg1-2) unstable; urgency=medium
 
   * Team upload
