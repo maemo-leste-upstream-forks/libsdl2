@@ -41,7 +41,8 @@ Build-Depends:
  libsamplerate0-dev,
  wayland-protocols
 Build-Depends-Indep:
- doxygen <!nodoc>
+ graphviz <!nodoc>,
+ doxygen <!nodoc>,
 Vcs-Git: https://salsa.debian.org/sdl-team/libsdl2.git
 Vcs-Browser: https://salsa.debian.org/sdl-team/libsdl2
 Homepage: https://www.libsdl.org/
