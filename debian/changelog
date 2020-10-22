@@ -1,3 +1,10 @@
+libsdl2 (2.0.12+dfsg1-5) UNRELEASED; urgency=medium
+
+  * (Build-)Depend on libgles-dev instead of libgles2-mesa-dev.
+    (Closes: #972190)
+
+ -- Felix Geyer <fgeyer@debian.org>  Tue, 20 Oct 2020 12:09:11 +0200
+
 libsdl2 (2.0.12+dfsg1-4) unstable; urgency=medium
 
   * Team upload
