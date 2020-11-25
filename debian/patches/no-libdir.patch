@@ -1,11 +1,25 @@
-Description: This makes the -dev package multiarch
-Author: Gianfranco Costamagna <locutusofborg@debian.org>
+From: Gianfranco Costamagna <locutusofborg@debian.org>
+Date: Wed, 27 Sep 2017 00:29:24 +0200
+Subject: Remove libdir from sdl2-config and sdl2-config.cmake
 
-Index: libsdl2/sdl2-config.cmake.in
-===================================================================
---- libsdl2.orig/sdl2-config.cmake.in
-+++ libsdl2/sdl2-config.cmake.in
-@@ -5,9 +5,8 @@
+This makes the -dev package multiarch co-installable, allowing compilation
+of SDL programs for more than one architecture on the same system.
+
+This is not an upstreamable change, since it relies on a Debian-specific
+assumption (that we are installing the library into a directory on the
+linker's default search path).
+
+Forwarded: not-needed
+---
+ sdl2-config.cmake.in | 3 +--
+ sdl2-config.in       | 5 ++---
+ 2 files changed, 3 insertions(+), 5 deletions(-)
+
+diff --git a/sdl2-config.cmake.in b/sdl2-config.cmake.in
+index 110c605..713e320 100644
+--- a/sdl2-config.cmake.in
++++ b/sdl2-config.cmake.in
+@@ -5,9 +5,8 @@ set(exec_prefix "@exec_prefix@")
  set(libdir "@libdir@")
  set(SDL2_PREFIX "@prefix@")
  set(SDL2_EXEC_PREFIX "@prefix@")
@@ -16,10 +30,10 @@ Index: libsdl2/sdl2-config.cmake.in
  string(STRIP "${SDL2_LIBRARIES}" SDL2_LIBRARIES)
  
  if(NOT TARGET SDL2::SDL2)
-Index: libsdl2/sdl2-config.in
-===================================================================
---- libsdl2.orig/sdl2-config.in
-+++ libsdl2/sdl2-config.in
+diff --git a/sdl2-config.in b/sdl2-config.in
+index 254a345..e1f078d 100644
+--- a/sdl2-config.in
++++ b/sdl2-config.in
 @@ -3,7 +3,6 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -28,7 +42,7 @@ Index: libsdl2/sdl2-config.in
  
  @ENABLE_STATIC_FALSE@usage="\
  @ENABLE_STATIC_FALSE@Usage: $0 [--prefix[=DIR]] [--exec-prefix[=DIR]] [--version] [--cflags] [--libs]"
-@@ -45,11 +44,11 @@
+@@ -45,11 +44,11 @@ while test $# -gt 0; do
        echo -I@includedir@/SDL2 @SDL_CFLAGS@
        ;;
  @ENABLE_SHARED_TRUE@    --libs)
