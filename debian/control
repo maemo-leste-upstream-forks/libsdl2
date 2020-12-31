@@ -21,6 +21,7 @@ Build-Depends:
  libibus-1.0-dev,
  libpulse-dev,
  libsndio-dev,
+ libts-dev [linux-any],
  libudev-dev [linux-any],
  libusb2-dev [kfreebsd-any],
  libusbhid-dev [kfreebsd-any],
