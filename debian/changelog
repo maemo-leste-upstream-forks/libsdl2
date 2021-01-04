@@ -10,6 +10,7 @@ libsdl2 (2.0.12+dfsg1-5) UNRELEASED; urgency=medium
   [ Simon McVittie ]
   * d/p/no-libdir.patch: Expand description.
     Among other things this explains why it isn't an upstreamable change.
+  * New upstream release
 
   [ Fabian Greffrath ]
   * enable HIDAPI for low level joystick drivers (Closes: #975989)
