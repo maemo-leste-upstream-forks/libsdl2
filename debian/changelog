@@ -7,15 +7,17 @@ libsdl2 (2.0.14+dfsg1-1) UNRELEASED; urgency=medium
   [ Clayton Craft ]
   * debian: enable touchscreen support with libts
 
+  [ Fabian Greffrath ]
+  * enable HIDAPI for low level joystick drivers (Closes: #975989)
+
   [ Simon McVittie ]
   * d/p/no-libdir.patch: Expand description.
     Among other things this explains why it isn't an upstreamable change.
   * New upstream release
+    - Refresh patch
+  * Add Suggests on xdg-utils, for SDL_OpenURL()
 
-  [ Fabian Greffrath ]
-  * enable HIDAPI for low level joystick drivers (Closes: #975989)
-
- -- Simon McVittie <smcv@debian.org>  Mon, 04 Jan 2021 14:29:01 +0000
+ -- Simon McVittie <smcv@debian.org>  Mon, 04 Jan 2021 15:16:50 +0000
 
 libsdl2 (2.0.12+dfsg1-4) unstable; urgency=medium
 
