@@ -7,7 +7,7 @@ Files-Excluded: Android.mk
                 debian
                 src/hidapi/android
                 src/hidapi/ios
-                src/hidapi/linux
+                src/hidapi/linux/hid.cpp
                 src/hidapi/mac
                 src/hidapi/testgui
                 src/hidapi/windows
@@ -37,6 +37,10 @@ Files: include/SDL_opengles2_gl2.h
        include/SDL_opengles2_gl2platform.h
 Copyright: 1997-2016 Sam Lantinga <slouken@libsdl.org>
 License: SGI-Free-Software-License-B
+
+Files: src/hidapi/linux/hid.c
+Copyright: 2009-2010 Alan Ott, Signal 11 Software
+License: GPL-3 or BSD-3-clause or hidapi-orig
 
 Files: src/libm/*
 Copyright: 1993 by Sun Microsystems, Inc. All rights reserved.
@@ -538,3 +542,8 @@ License: Mozilla-permissive
  AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
  OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
  SOFTWARE.
+
+License: hidapi-orig
+ This software may be used by anyone for any reason so
+ long as the copyright notice in the source files
+ remains intact.
