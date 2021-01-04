@@ -16,7 +16,7 @@ Forwarded: not-needed
  2 files changed, 3 insertions(+), 5 deletions(-)
 
 diff --git a/sdl2-config.cmake.in b/sdl2-config.cmake.in
-index 110c605..713e320 100644
+index e528a88..993b4ed 100644
 --- a/sdl2-config.cmake.in
 +++ b/sdl2-config.cmake.in
 @@ -5,9 +5,8 @@ set(exec_prefix "@exec_prefix@")
@@ -31,7 +31,7 @@ index 110c605..713e320 100644
  
  if(NOT TARGET SDL2::SDL2)
 diff --git a/sdl2-config.in b/sdl2-config.in
-index 254a345..e1f078d 100644
+index 5a2aed2..5cc21a6 100644
 --- a/sdl2-config.in
 +++ b/sdl2-config.in
 @@ -3,7 +3,6 @@
@@ -51,8 +51,8 @@ index 254a345..e1f078d 100644
  @ENABLE_SHARED_TRUE@      ;;
  @ENABLE_STATIC_TRUE@@ENABLE_SHARED_TRUE@    --static-libs)
  @ENABLE_STATIC_TRUE@@ENABLE_SHARED_FALSE@    --libs|--static-libs)
--@ENABLE_STATIC_TRUE@      echo -L@libdir@ @SDL_RLD_FLAGS@ @SDL_STATIC_LIBS@
-+@ENABLE_STATIC_TRUE@      echo @SDL_RLD_FLAGS@ @SDL_STATIC_LIBS@
+-@ENABLE_STATIC_TRUE@      echo -L@libdir@ @SDL_LIBS@ @SDL_STATIC_LIBS@
++@ENABLE_STATIC_TRUE@      echo @SDL_LIBS@ @SDL_STATIC_LIBS@
  @ENABLE_STATIC_TRUE@      ;;
      *)
        echo "${usage}" 1>&2
