@@ -1,4 +1,4 @@
-libsdl2 (2.0.14+dfsg1-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.14+dfsg2-1) UNRELEASED; urgency=medium
 
   [ Felix Geyer ]
   * (Build-)Depend on libgles-dev instead of libgles2-mesa-dev.
@@ -14,6 +14,8 @@ libsdl2 (2.0.14+dfsg1-1) UNRELEASED; urgency=medium
   * d/p/no-libdir.patch: Expand description.
     Among other things this explains why it isn't an upstreamable change.
   * New upstream release
+    - Delete non-free files more selectively, so we have what's needed
+      for HIDAPI
     - Refresh patch
   * Add Suggests on xdg-utils, for SDL_OpenURL()
 
