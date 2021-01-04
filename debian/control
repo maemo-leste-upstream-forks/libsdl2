@@ -5,7 +5,8 @@ Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.de
 Uploaders:
  Sam Hocevar <sho@debian.org>,
  Manuel A. Fernandez Montecelo <mafm@debian.org>,
- Felix Geyer <fgeyer@debian.org>
+ Felix Geyer <fgeyer@debian.org>,
+ Simon McVittie <smcv@debian.org>
 Standards-Version: 4.5.1
 Build-Depends:
  debhelper-compat (= 12),
