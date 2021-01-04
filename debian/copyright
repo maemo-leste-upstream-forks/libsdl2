@@ -11,9 +11,8 @@ Files-Excluded: Android.mk
                 src/hidapi/mac
                 src/hidapi/testgui
                 src/hidapi/windows
-                src/joystick/hidapi/steam/controller_constants.h
-                src/joystick/hidapi/steam/controller_structs.h
                 src/render/metal/SDL_shaders_metal_*.h
+                src/video/os2/my_gradd.h
                 VisualC
                 VisualC-WinRT
                 Xcode
@@ -25,6 +24,7 @@ Copyright:
  2012 Raspberry Pi Foundation
  2012-2018 RISC OS Open Ltd
  2018-2019 EXL
+ 2020 Valve Corporation
 License: zlib/libpng and zlib-libpng-like-permissive
 
 Files: include/SDL_opengl_glext.h
@@ -73,6 +73,13 @@ Files:
 Copyright:
  2009-2010 Nokia Corporation
 License: Mozilla-permissive and Expat and zlib/libpng
+
+Files: src/video/khronos/vulkan/*.h
+Copyright:
+ 2014-2020 The Khronos Group Inc.
+ 2015-2017 Valve Corporation
+ 2015-2017 LunarG, Inc.
+License: Apache-2.0
 
 Files: src/video/haiku/SDL_bkeyboard.cc
        src/video/haiku/SDL_bkeyboard.h
@@ -262,6 +269,22 @@ License: MIT/X11
  be used in advertising or otherwise to promote the sale, use or other deal-
  ings in this Software without prior written authorization from the XFree86
  Project.
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+      http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, a copy of the Apache License version 2.0
+ can be found in /usr/share/common-licenses/Apache-2.0.
 
 License: BSD-3-clause-chromium
  Copyright (c) 2011 Google Inc. All rights reserved.
