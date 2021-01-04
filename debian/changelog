@@ -1,4 +1,4 @@
-libsdl2 (2.0.12+dfsg1-5) UNRELEASED; urgency=medium
+libsdl2 (2.0.14+dfsg1-1) UNRELEASED; urgency=medium
 
   [ Felix Geyer ]
   * (Build-)Depend on libgles-dev instead of libgles2-mesa-dev.
