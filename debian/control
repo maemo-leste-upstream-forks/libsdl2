@@ -120,7 +120,6 @@ Multi-Arch: foreign
 Build-Profiles: <!nodoc>
 Depends:
  ${misc:Depends},
- libjs-jquery
 Breaks:
  libsdl2-dev (<< 2.0.4+dfsg-1)
 Replaces:
