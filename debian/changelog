@@ -4,9 +4,6 @@ libsdl2 (2.0.14+dfsg2-1) UNRELEASED; urgency=medium
   * (Build-)Depend on libgles-dev instead of libgles2-mesa-dev.
     (Closes: #972190)
 
-  [ Clayton Craft ]
-  * debian: enable touchscreen support with libts
-
   [ Fabian Greffrath ]
   * enable HIDAPI for low level joystick drivers (Closes: #975989)
 
@@ -17,9 +14,21 @@ libsdl2 (2.0.14+dfsg2-1) UNRELEASED; urgency=medium
     - Delete non-free files more selectively, so we have what's needed
       for HIDAPI
     - Refresh patch
+  * Install upstream's tests.
+    Most of them are manual tests rather than automated tests, so we don't
+    run them at build-time.
+    Package them in the -dev package for now, to avoid a trip through
+    the NEW queue to add a libsdl2-tests package. The installed location
+    is loosely based on what GNOME installed-tests do, but must be multiarch
+    until/unless we separate out a libsdl2-tests package, so put it below
+    the $(libdir) rather than $(libexecdir).
   * Add Suggests on xdg-utils, for SDL_OpenURL()
+  * Add myself to Uploaders
+  * d/copyright: Update for new upstream release
+  * d/copyright: Reorder so patterns are matched in the right order
+  * Standards-Version: 4.5.1 (no changes required)
 
- -- Simon McVittie <smcv@debian.org>  Mon, 04 Jan 2021 15:16:50 +0000
+ -- Simon McVittie <smcv@debian.org>  Tue, 05 Jan 2021 13:13:10 +0000
 
 libsdl2 (2.0.12+dfsg1-4) unstable; urgency=medium
 
