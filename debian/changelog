@@ -14,6 +14,10 @@ libsdl2 (2.0.12+dfsg1-5) UNRELEASED; urgency=medium
   [ Fabian Greffrath ]
   * enable HIDAPI for low level joystick drivers (Closes: #975989)
 
+  [ Helmut Grohne ]
+  * Remove wrong check of nocheck profile. (Closes: #979369)
+  * Don't replace jquery.js: What is named jquery, is not jquery.
+
  -- Simon McVittie <smcv@debian.org>  Mon, 04 Jan 2021 14:29:01 +0000
 
 libsdl2 (2.0.12+dfsg1-4) unstable; urgency=medium

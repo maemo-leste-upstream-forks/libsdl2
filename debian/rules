@@ -50,8 +50,6 @@ endif
 override_dh_auto_configure:
 	dh_auto_configure -- $(confflags)
 
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
-
 override_dh_auto_build-indep:
 	GZIP="-9n" tar czf debian/examples.tar.gz test --owner=0 --group=0 --mode=go=rX,u+rw,a-s --clamp-mtime --mtime="@$(SOURCE_DATE_EPOCH)" --sort=name
 	doxygen docs/doxyfile
@@ -59,16 +57,11 @@ override_dh_auto_build-indep:
 	find output -name "*.md5" -delete
 	find output -type d -empty -delete
 
-	find output -name "jquery.js" -delete
-	dh_link -plibsdl2-doc usr/share/javascript/jquery/jquery.js usr/share/doc/libsdl2-doc/html/jquery.js
-
 # Force examples to be installed in libsdl2-doc, it does not happen with compat
 # level v11 despite having the file debian/libsdl2-doc.examples (it gets
 # installed as part of libsdl2-dev instead)
 override_dh_installexamples-indep:
 	dh_installexamples -i --doc-main-package=libsdl2-doc
-
-endif # !nocheck
 
 override_dh_auto_build-arch:
 	dh_auto_build -- V=1
