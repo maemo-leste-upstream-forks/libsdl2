@@ -1,4 +1,4 @@
-libsdl2 (2.0.14+dfsg2-1) UNRELEASED; urgency=medium
+libsdl2 (2.0.14+dfsg2-1) experimental; urgency=medium
 
   [ Felix Geyer ]
   * (Build-)Depend on libgles-dev instead of libgles2-mesa-dev.
@@ -33,7 +33,7 @@ libsdl2 (2.0.14+dfsg2-1) UNRELEASED; urgency=medium
   * Don't replace jquery.js: doxygen's jquery.js is not just jquery.
     See debian/README.jquery in the doxygen package.
 
- -- Simon McVittie <smcv@debian.org>  Tue, 05 Jan 2021 23:15:14 +0000
+ -- Simon McVittie <smcv@debian.org>  Wed, 06 Jan 2021 11:13:12 +0000
 
 libsdl2 (2.0.12+dfsg1-4) unstable; urgency=medium
 
