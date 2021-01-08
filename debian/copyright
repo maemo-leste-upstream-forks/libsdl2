@@ -7,13 +7,12 @@ Files-Excluded: Android.mk
                 debian
                 src/hidapi/android
                 src/hidapi/ios
-                src/hidapi/linux
+                src/hidapi/linux/hid.cpp
                 src/hidapi/mac
                 src/hidapi/testgui
                 src/hidapi/windows
-                src/joystick/hidapi/steam/controller_constants.h
-                src/joystick/hidapi/steam/controller_structs.h
                 src/render/metal/SDL_shaders_metal_*.h
+                src/video/os2/my_gradd.h
                 VisualC
                 VisualC-WinRT
                 Xcode
@@ -25,6 +24,7 @@ Copyright:
  2012 Raspberry Pi Foundation
  2012-2018 RISC OS Open Ltd
  2018-2019 EXL
+ 2020 Valve Corporation
 License: zlib/libpng and zlib-libpng-like-permissive
 
 Files: include/SDL_opengl_glext.h
@@ -37,6 +37,10 @@ Files: include/SDL_opengles2_gl2.h
        include/SDL_opengles2_gl2platform.h
 Copyright: 1997-2016 Sam Lantinga <slouken@libsdl.org>
 License: SGI-Free-Software-License-B
+
+Files: src/hidapi/linux/hid.c
+Copyright: 2009-2010 Alan Ott, Signal 11 Software
+License: BSD-3-clause or GPL-3 or hidapi-orig
 
 Files: src/libm/*
 Copyright: 1993 by Sun Microsystems, Inc. All rights reserved.
@@ -74,6 +78,13 @@ Copyright:
  2009-2010 Nokia Corporation
 License: Mozilla-permissive and Expat and zlib/libpng
 
+Files: src/video/khronos/vulkan/*.h
+Copyright:
+ 2014-2020 The Khronos Group Inc.
+ 2015-2017 Valve Corporation
+ 2015-2017 LunarG, Inc.
+License: Apache-2.0
+
 Files: src/video/haiku/SDL_bkeyboard.cc
        src/video/haiku/SDL_bkeyboard.h
 Copyright: 1997-2012 Sam Lantinga
@@ -84,15 +95,15 @@ Files: src/video/x11/imKStoUCS.c
 Copyright: 1994-2003 The XFree86 Project, Inc.
 License: MIT/X11
 
+Files: test/testautomation_*
+Copyright: Edgar Simo "bobbens"
+License: PublicDomain_Edgar_Simo
+
 Files: test/testautomation_rwops.c
        include/SDL_test_fuzzer.h
        include/SDL_test_harness.h
 Copyright: 2011 Markus Kauppila <markus.kauppila@gmail.com>
 License: zlib/libpng
-
-Files: test/testautomation_*
-Copyright: Edgar Simo "bobbens"
-License: PublicDomain_Edgar_Simo
 
 Files: test/testhaptic.c
 Copyright: 1997-2011 Sam Lantinga <slouken@libsdl.org>
@@ -262,6 +273,22 @@ License: MIT/X11
  be used in advertising or otherwise to promote the sale, use or other deal-
  ings in this Software without prior written authorization from the XFree86
  Project.
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+      http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, a copy of the Apache License version 2.0
+ can be found in /usr/share/common-licenses/Apache-2.0.
 
 License: BSD-3-clause-chromium
  Copyright (c) 2011 Google Inc. All rights reserved.
@@ -443,6 +470,11 @@ License: BrownUn_UnCalifornia_ErikCorry
   * SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
   */
 
+License: GPL-3
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in
+ /usr/share/common-licenses/GPL-3.
+
 License: Gareth_McCaughan
   You may use it in anything you like; you may make money
   out of it; you may distribute it in object form or as
@@ -515,3 +547,8 @@ License: Mozilla-permissive
  AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
  OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
  SOFTWARE.
+
+License: hidapi-orig
+ This software may be used by anyone for any reason so
+ long as the copyright notice in the source files
+ remains intact.

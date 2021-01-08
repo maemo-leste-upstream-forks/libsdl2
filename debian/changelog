@@ -1,24 +1,39 @@
-libsdl2 (2.0.12+dfsg1-5) UNRELEASED; urgency=medium
+libsdl2 (2.0.14+dfsg2-1) experimental; urgency=medium
 
   [ Felix Geyer ]
   * (Build-)Depend on libgles-dev instead of libgles2-mesa-dev.
     (Closes: #972190)
 
-  [ Clayton Craft ]
-  * debian: enable touchscreen support with libts
+  [ Fabian Greffrath ]
+  * enable HIDAPI for low level joystick drivers (Closes: #975989)
 
   [ Simon McVittie ]
   * d/p/no-libdir.patch: Expand description.
     Among other things this explains why it isn't an upstreamable change.
-
-  [ Fabian Greffrath ]
-  * enable HIDAPI for low level joystick drivers (Closes: #975989)
+  * New upstream release
+    - Delete non-free files more selectively, so we have what's needed
+      for HIDAPI
+    - Refresh patch
+  * Install upstream's tests.
+    Most of them are manual tests rather than automated tests, so we don't
+    run them at build-time.
+    Package them in the -dev package for now, to avoid a trip through
+    the NEW queue to add a libsdl2-tests package. The installed location
+    is loosely based on what GNOME installed-tests do, but must be multiarch
+    until/unless we separate out a libsdl2-tests package, so put it below
+    the $(libdir) rather than $(libexecdir).
+  * Add Suggests on xdg-utils, for SDL_OpenURL()
+  * Add myself to Uploaders
+  * d/copyright: Update for new upstream release
+  * d/copyright: Reorder so patterns are matched in the right order
+  * Standards-Version: 4.5.1 (no changes required)
 
   [ Helmut Grohne ]
-  * Remove wrong check of nocheck profile. (Closes: #979369)
-  * Don't replace jquery.js: What is named jquery, is not jquery.
+  * Remove wrong check of nocheck profile (Closes: #979369)
+  * Don't replace jquery.js: doxygen's jquery.js is not just jquery.
+    See debian/README.jquery in the doxygen package.
 
- -- Simon McVittie <smcv@debian.org>  Mon, 04 Jan 2021 14:29:01 +0000
+ -- Simon McVittie <smcv@debian.org>  Wed, 06 Jan 2021 11:13:12 +0000
 
 libsdl2 (2.0.12+dfsg1-4) unstable; urgency=medium
 
