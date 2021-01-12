@@ -47,6 +47,9 @@ endif
 	dh $@
 
 override_dh_auto_configure:
+	sed -e "s/@DEB_VERSION_UPSTREAM@/$(DEB_VERSION_UPSTREAM)/" \
+		< debian/libsdl2-2.0-0.symbols.in \
+		> debian/libsdl2-2.0-0.symbols
 	dh_auto_configure -- $(confflags)
 	# test/configure.ac uses AC_PATH_X, so we need to pass in
 	# --x-includes and --x-libraries to avoid it wanting to use

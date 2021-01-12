@@ -733,3 +733,9 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_wcsncasecmp@Base 2.0.14
  SDL_wcsncmp@Base 2.0.12
  SDL_wcsstr@Base 2.0.12
+ (regex|optional)"^org_kde_kwin_.*_interface@Base$" @DEB_VERSION_UPSTREAM@
+ (regex|optional)"^qt_.*_interface@Base$" @DEB_VERSION_UPSTREAM@
+ (regex|optional)"^wl_.*_interface@Base$" @DEB_VERSION_UPSTREAM@
+ (regex|optional)"^xdg_.*_interface@Base$" @DEB_VERSION_UPSTREAM@
+ (regex|optional)"^zwp_.*_interface@Base$" @DEB_VERSION_UPSTREAM@
+ (regex|optional)"^zxdg_.*_interface@Base$" @DEB_VERSION_UPSTREAM@
