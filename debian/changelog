@@ -1,3 +1,14 @@
+libsdl2 (2.0.14+dfsg2-2) unstable; urgency=medium
+
+  * Add .symbols file
+  * Ignore symbols and avoid dpkg-gensymbols warnings for generated
+    Wayland interfaces.
+    I'm going to ask upstream about removing these from the library's ABI,
+    but for now, mark them as new in the latest upstream version.
+  * Release to unstable
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 12 Jan 2021 20:11:19 +0000
+
 libsdl2 (2.0.14+dfsg2-1) experimental; urgency=medium
 
   [ Felix Geyer ]
