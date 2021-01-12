@@ -122,13 +122,23 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_GameControllerGetButton@Base 2.0.12
  SDL_GameControllerGetButtonFromString@Base 2.0.12
  SDL_GameControllerGetJoystick@Base 2.0.12
+ SDL_GameControllerGetNumTouchpadFingers@Base 2.0.14
+ SDL_GameControllerGetNumTouchpads@Base 2.0.14
  SDL_GameControllerGetPlayerIndex@Base 2.0.12
  SDL_GameControllerGetProduct@Base 2.0.12
  SDL_GameControllerGetProductVersion@Base 2.0.12
+ SDL_GameControllerGetSensorData@Base 2.0.14
+ SDL_GameControllerGetSerial@Base 2.0.14
  SDL_GameControllerGetStringForAxis@Base 2.0.12
  SDL_GameControllerGetStringForButton@Base 2.0.12
+ SDL_GameControllerGetTouchpadFinger@Base 2.0.14
  SDL_GameControllerGetType@Base 2.0.12
  SDL_GameControllerGetVendor@Base 2.0.12
+ SDL_GameControllerHasAxis@Base 2.0.14
+ SDL_GameControllerHasButton@Base 2.0.14
+ SDL_GameControllerHasLED@Base 2.0.14
+ SDL_GameControllerHasSensor@Base 2.0.14
+ SDL_GameControllerIsSensorEnabled@Base 2.0.14
  SDL_GameControllerMapping@Base 2.0.12
  SDL_GameControllerMappingForDeviceIndex@Base 2.0.12
  SDL_GameControllerMappingForGUID@Base 2.0.12
@@ -138,7 +148,10 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_GameControllerNumMappings@Base 2.0.12
  SDL_GameControllerOpen@Base 2.0.12
  SDL_GameControllerRumble@Base 2.0.12
+ SDL_GameControllerRumbleTriggers@Base 2.0.14
+ SDL_GameControllerSetLED@Base 2.0.14
  SDL_GameControllerSetPlayerIndex@Base 2.0.12
+ SDL_GameControllerSetSensorEnabled@Base 2.0.14
  SDL_GameControllerTypeForIndex@Base 2.0.12
  SDL_GameControllerUpdate@Base 2.0.12
  SDL_GetAssertionHandler@Base 2.0.12
@@ -168,6 +181,7 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_GetDisplayOrientation@Base 2.0.12
  SDL_GetDisplayUsableBounds@Base 2.0.12
  SDL_GetError@Base 2.0.12
+ SDL_GetErrorMsg@Base 2.0.14
  SDL_GetEventFilter@Base 2.0.12
  SDL_GetGlobalMouseState@Base 2.0.12
  SDL_GetGrabbedWindow@Base 2.0.12
@@ -197,6 +211,7 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_GetPlatform@Base 2.0.12
  SDL_GetPowerInfo@Base 2.0.12
  SDL_GetPrefPath@Base 2.0.12
+ SDL_GetPreferredLocales@Base 2.0.14
  SDL_GetQueuedAudioSize@Base 2.0.12
  SDL_GetRGB@Base 2.0.12
  SDL_GetRGBA@Base 2.0.12
@@ -299,6 +314,7 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_HasSSE42@Base 2.0.12
  SDL_HasSSE@Base 2.0.12
  SDL_HasScreenKeyboardSupport@Base 2.0.12
+ SDL_HasSurfaceRLE@Base 2.0.14
  SDL_HideWindow@Base 2.0.12
  SDL_Init@Base 2.0.12
  SDL_InitSubSystem@Base 2.0.12
@@ -310,8 +326,10 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_IsShapedWindow@Base 2.0.12
  SDL_IsTablet@Base 2.0.12
  SDL_IsTextInputActive@Base 2.0.12
+ SDL_JoystickAttachVirtual@Base 2.0.14
  SDL_JoystickClose@Base 2.0.12
  SDL_JoystickCurrentPowerLevel@Base 2.0.12
+ SDL_JoystickDetachVirtual@Base 2.0.14
  SDL_JoystickEventState@Base 2.0.12
  SDL_JoystickFromInstanceID@Base 2.0.12
  SDL_JoystickFromPlayerIndex@Base 2.0.12
@@ -334,10 +352,13 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_JoystickGetPlayerIndex@Base 2.0.12
  SDL_JoystickGetProduct@Base 2.0.12
  SDL_JoystickGetProductVersion@Base 2.0.12
+ SDL_JoystickGetSerial@Base 2.0.14
  SDL_JoystickGetType@Base 2.0.12
  SDL_JoystickGetVendor@Base 2.0.12
+ SDL_JoystickHasLED@Base 2.0.14
  SDL_JoystickInstanceID@Base 2.0.12
  SDL_JoystickIsHaptic@Base 2.0.12
+ SDL_JoystickIsVirtual@Base 2.0.14
  SDL_JoystickName@Base 2.0.12
  SDL_JoystickNameForIndex@Base 2.0.12
  SDL_JoystickNumAxes@Base 2.0.12
@@ -346,7 +367,12 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_JoystickNumHats@Base 2.0.12
  SDL_JoystickOpen@Base 2.0.12
  SDL_JoystickRumble@Base 2.0.12
+ SDL_JoystickRumbleTriggers@Base 2.0.14
+ SDL_JoystickSetLED@Base 2.0.14
  SDL_JoystickSetPlayerIndex@Base 2.0.12
+ SDL_JoystickSetVirtualAxis@Base 2.0.14
+ SDL_JoystickSetVirtualButton@Base 2.0.14
+ SDL_JoystickSetVirtualHat@Base 2.0.14
  SDL_JoystickUpdate@Base 2.0.12
  SDL_LinuxSetThreadPriority@Base 2.0.12
  SDL_LoadBMP_RW@Base 2.0.12
@@ -360,6 +386,7 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_LockAudioDevice@Base 2.0.12
  SDL_LockJoysticks@Base 2.0.12
  SDL_LockMutex@Base 2.0.12
+ SDL_LockSensors@Base 2.0.14
  SDL_LockSurface@Base 2.0.12
  SDL_LockTexture@Base 2.0.12
  SDL_LockTextureToSurface@Base 2.0.12
@@ -388,6 +415,8 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_MemoryBarrierReleaseFunction@Base 2.0.12
  SDL_Metal_CreateView@Base 2.0.12
  SDL_Metal_DestroyView@Base 2.0.12
+ SDL_Metal_GetDrawableSize@Base 2.0.14
+ SDL_Metal_GetLayer@Base 2.0.14
  SDL_MinimizeWindow@Base 2.0.12
  SDL_MixAudio@Base 2.0.12
  SDL_MixAudioFormat@Base 2.0.12
@@ -404,6 +433,7 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_OnApplicationWillTerminate@Base 2.0.12
  SDL_OpenAudio@Base 2.0.12
  SDL_OpenAudioDevice@Base 2.0.12
+ SDL_OpenURL@Base 2.0.14
  SDL_PauseAudio@Base 2.0.12
  SDL_PauseAudioDevice@Base 2.0.12
  SDL_PeepEvents@Base 2.0.12
@@ -480,6 +510,7 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_SIMDAlloc@Base 2.0.12
  SDL_SIMDFree@Base 2.0.12
  SDL_SIMDGetAlignment@Base 2.0.12
+ SDL_SIMDRealloc@Base 2.0.14
  SDL_SaveAllDollarTemplates@Base 2.0.12
  SDL_SaveBMP_RW@Base 2.0.12
  SDL_SaveDollarTemplate@Base 2.0.12
@@ -568,6 +599,7 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_UnlockAudioDevice@Base 2.0.12
  SDL_UnlockJoysticks@Base 2.0.12
  SDL_UnlockMutex@Base 2.0.12
+ SDL_UnlockSensors@Base 2.0.14
  SDL_UnlockSurface@Base 2.0.12
  SDL_UnlockTexture@Base 2.0.12
  SDL_UpdateTexture@Base 2.0.12
@@ -615,6 +647,7 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_copysignf@Base 2.0.12
  SDL_cos@Base 2.0.12
  SDL_cosf@Base 2.0.12
+ SDL_crc32@Base 2.0.14
  SDL_exp@Base 2.0.12
  SDL_expf@Base 2.0.12
  SDL_fabs@Base 2.0.12
@@ -682,6 +715,8 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_tanf@Base 2.0.12
  SDL_tolower@Base 2.0.12
  SDL_toupper@Base 2.0.12
+ SDL_trunc@Base 2.0.14
+ SDL_truncf@Base 2.0.14
  SDL_uitoa@Base 2.0.12
  SDL_ulltoa@Base 2.0.12
  SDL_ultoa@Base 2.0.12
@@ -689,10 +724,12 @@ libSDL2-2.0.so.0 libsdl2-2.0-0 #MINVER#
  SDL_utf8strlen@Base 2.0.12
  SDL_vsnprintf@Base 2.0.12
  SDL_vsscanf@Base 2.0.12
+ SDL_wcscasecmp@Base 2.0.14
  SDL_wcscmp@Base 2.0.12
  SDL_wcsdup@Base 2.0.12
  SDL_wcslcat@Base 2.0.12
  SDL_wcslcpy@Base 2.0.12
  SDL_wcslen@Base 2.0.12
+ SDL_wcsncasecmp@Base 2.0.14
  SDL_wcsncmp@Base 2.0.12
  SDL_wcsstr@Base 2.0.12
