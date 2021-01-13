@@ -75,10 +75,10 @@ override_dh_auto_build-indep:
 		--clamp-mtime --mtime="@$(SOURCE_DATE_EPOCH)" \
 		--sort=name \
 		-czf debian/examples.tar.gz test
-	doxygen docs/doxyfile
+	cd docs && doxygen doxyfile
 	# useless files
-	find output -name "*.md5" -delete
-	find output -type d -empty -delete
+	find docs/output -name "*.md5" -delete
+	find docs/output -type d -empty -delete
 
 # Force examples to be installed in libsdl2-doc, it does not happen with compat
 # level v11 despite having the file debian/libsdl2-doc.examples (it gets
@@ -98,7 +98,7 @@ override_dh_auto_build-arch:
 override_dh_auto_clean-indep:
 	dh_auto_clean
 	rm -f debian/examples.tar.gz
-	rm -rf output
+	rm -rf docs/output
 
 override_dh_auto_install-arch:
 	dh_auto_install -- V=1
