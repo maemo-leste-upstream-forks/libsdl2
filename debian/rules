@@ -42,6 +42,8 @@ ifeq (hurd,$(findstring hurd,$(DEB_HOST_ARCH_CPU)))
   confflags += --disable--video-opengles
 endif
 
+# don't use libunwind even if it happens to be installed
+confflags += ac_cv_header_libunwind_h=no
 
 %:
 	dh $@
