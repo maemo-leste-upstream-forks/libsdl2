@@ -75,7 +75,8 @@ override_dh_auto_build-indep:
 		--clamp-mtime --mtime="@$(SOURCE_DATE_EPOCH)" \
 		--sort=name \
 		-czf debian/examples.tar.gz test
-	cd docs && doxygen doxyfile
+	sed -e 's/FULL_PATH_NAMES *=.*/FULL_PATH_NAMES = NO/' < docs/doxyfile > debian/Doxyfile
+	cd docs && doxygen ../debian/Doxyfile
 	# useless files
 	find docs/output -name "*.md5" -delete
 	find docs/output -type d -empty -delete
@@ -97,6 +98,7 @@ override_dh_auto_build-arch:
 
 override_dh_auto_clean-indep:
 	dh_auto_clean
+	rm -f debian/Doxyfile
 	rm -f debian/examples.tar.gz
 	rm -rf docs/output
 
