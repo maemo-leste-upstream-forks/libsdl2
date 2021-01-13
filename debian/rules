@@ -67,7 +67,12 @@ override_dh_auto_configure:
 		$(NULL)
 
 override_dh_auto_build-indep:
-	GZIP="-9n" tar czf debian/examples.tar.gz test --owner=0 --group=0 --mode=go=rX,u+rw,a-s --clamp-mtime --mtime="@$(SOURCE_DATE_EPOCH)" --sort=name
+	GZIP="-9n" tar \
+		--exclude=autom4te.cache \
+		--owner=0 --group=0 --mode=go=rX,u+rw,a-s \
+		--clamp-mtime --mtime="@$(SOURCE_DATE_EPOCH)" \
+		--sort=name \
+		-czf debian/examples.tar.gz test
 	doxygen docs/doxyfile
 	# useless files
 	find output -name "*.md5" -delete
