@@ -1,3 +1,30 @@
+libsdl2 (2.0.14+dfsg2-3) UNRELEASED; urgency=medium
+
+  * Exclude autom4te.cache from examples.tar.gz, for reproducible build
+  * d/rules: Disable full path names in documentation.
+    This makes the documentation reproducible.
+  * d/rules: Explicitly disable libunwind if it happens to be installed.
+    The build includes the header if detected, but doesn't link to the
+    library, causing link failure. Explicitly disabling it also makes the
+    build more deterministic in non-minimal chroots.
+  * docs: Only run doxygen across header files, not the entire source tree.
+    This avoids a lot of noise caused by documenting generated files,
+    which made the build non-reproducible.
+  * Add patches to exclude generated Wayland symbols from the library ABI.
+    These were not intended to be public, and are not namespaced, which
+    could lead to namespace collisions with other packages.
+  * Don't generate symbols file from a template.
+    This is unnecessary now that we don't have to suppress the symbols for
+    Wayland interfaces.
+  * d/libsdl2-2.0-0.symbols: SDL_LinuxSetThreadPriority is Linux-only
+  * Avoid using debian/source/local-options.
+    This is incompatible with using dgit, and the unapply-patches option
+    is mostly not useful now that dpkg-source automatically returns the
+    tree to its original state after building (if patches were previously
+    unapplied, they end up unapplied afterwards).
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 15 Jan 2021 15:31:38 +0000
+
 libsdl2 (2.0.14+dfsg2-2) unstable; urgency=medium
 
   * Add .symbols file
