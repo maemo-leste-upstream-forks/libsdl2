@@ -53,6 +53,7 @@ override_dh_auto_configure:
 	# test/configure.ac uses AC_PATH_X, so we need to pass in
 	# --x-includes and --x-libraries to avoid it wanting to use
 	# xmkmf to discover the right values.
+	# test/configure.ac doesn't respect CPPFLAGS or LDFLAGS.
 	dh_auto_configure \
 		--buildsystem=autoconf \
 		--sourcedirectory=$(CURDIR)/test \
@@ -63,6 +64,7 @@ override_dh_auto_configure:
 		SDL_CFLAGS=-I$(CURDIR)/include \
 		SDL_LIBS="-L$(CURDIR)/build/.libs -lSDL2" \
 		ac_cv_lib_SDL2_ttf_TTF_Init=no \
+		CFLAGS="$(CPPFLAGS) $(CFLAGS) $(LDFLAGS)" \
 		$(NULL)
 
 override_dh_auto_build-indep:
