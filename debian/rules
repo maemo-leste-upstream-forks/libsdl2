@@ -8,6 +8,7 @@ confflags = --disable-rpath --enable-sdl-dlopen \
             --disable-alsa-shared --disable-pulseaudio-shared \
             --enable-ibus \
             --disable-x11-shared --enable-video-directfb \
+            --disable-directfb-shared \
             --enable-video-opengles \
             --disable-video-opengles1 \
             --enable-video-wayland --disable-wayland-shared \
