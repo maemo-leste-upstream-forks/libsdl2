@@ -65,7 +65,7 @@ override_dh_auto_configure:
 		SDL_CFLAGS=-I$(CURDIR)/include \
 		SDL_LIBS="-L$(CURDIR)/build/.libs -lSDL2" \
 		ac_cv_lib_SDL2_ttf_TTF_Init=no \
-		CFLAGS="$(CPPFLAGS) $(CFLAGS) $(LDFLAGS)" \
+		CFLAGS="$(CPPFLAGS) -I/usr/include/directfb $(CFLAGS) $(LDFLAGS)" \
 		$(NULL)
 
 override_dh_auto_build-indep:
