@@ -40,7 +40,6 @@ Build-Depends:
  libxxf86vm-dev,
  pkg-config,
  libsamplerate0-dev,
- libdirectfb-dev,
  wayland-protocols
 Build-Depends-Indep:
  graphviz <!nodoc>,
@@ -101,7 +100,6 @@ Depends:
  libxt-dev,
  libxv-dev,
  libxxf86vm-dev,
- libdirectfb-dev,
  ${misc:Depends},
  ${shlibs:Depends}
 Conflicts:
